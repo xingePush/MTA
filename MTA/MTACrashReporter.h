@@ -21,7 +21,12 @@ typedef void (^errorCallback)(NSString *);
 /**
  崩溃报告的回调函数
  */
-@property (nonatomic, copy) errorCallback crashCallback; //用于crash日志删除前回调，将在崩溃发生后下次启动时调用， param为crash JSON数据
+@property (nonatomic, copy) errorCallback crashCallback;
+
+/**
+ 是否启用崩溃报告，需要在 MTA 启动函数之前调用。默认启动
+ */
+@property (nonatomic, assign) BOOL enableCrashReport;
 
 /**
  单例方法，返回崩溃报告的共享实例

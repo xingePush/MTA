@@ -12,7 +12,7 @@
 /**
  MTA版本号
  */
-#define MTA_SDK_VERSION @"2.1.0"
+#define MTA_SDK_VERSION @"2.1.2"
 
 #pragma mark - 接口监控相关数据结构
 /**
@@ -222,11 +222,7 @@ typedef NS_ENUM(NSInteger, MTAErrorCode) {
  自定义事件分为两类
  1. 次数统计
  2. 时长统计
- 两类自定义事件都可以带参数，参数的类型有两种
- 1. NSDictionary 类型的参数
- 2. NSArray 类型的参数
- 因为NSDictionary类型的参数能表达的内容更丰富
- 因此推荐优先使用NSDictionary的参数上报
+ 两类自定义事件都可以带 NSDictionary 类型的参数
  */
 
 #pragma mark - 自定义事件参数长度限制说明
@@ -236,7 +232,6 @@ typedef NS_ENUM(NSInteger, MTAErrorCode) {
  然后判断连接后的字符串是否超过限制。
  */
 
-#pragma mark - NSDictionary为参数的自定义事件
 /**
  上报自定义事件
 
@@ -335,80 +330,6 @@ typedef NS_ENUM(NSInteger, MTAErrorCode) {
  @return MTA错误码，详情请看MTAErrorCode相关注释与自定义参数长度限制说明
  */
 + (MTAErrorCode)trackCustomKeyValueEventDuration:(float)seconds withEventid:(NSString *)event_id props:(NSDictionary *)kvs appKey:(NSString *)appkey isRealTime:(BOOL)isRealTime;
-
-#pragma mark - NSArray为参数的自定义事件
-/**
- 上报自定义事件
-
- @param event_id 事件的ID，ID需要先在MTA前台配置好才能生效
- @param array 事件的参数，参数需要先在MTA前台配置好才能生效
- @return MTA错误码，详情请看MTAErrorCode相关注释与自定义参数长度限制说明
- */
-+ (MTAErrorCode)trackCustomEvent:(NSString *)event_id args:(NSArray *)array;
-
-
-/**
- 上报自定义事件
- 并指定上报方式
-
- @param event_id 事件的ID，ID需要先在MTA前台配置好才能生效
- @param array 事件的参数，参数需要先在MTA前台配置好才能生效
- @param appkey 需要上报的appKey，若传入nil，则上报到启动函数中的appkey
- @param isRealTime 是否实时上报，若传入YES，则忽略全局上报策略实时上报。否则按照全局策略上报。
- @return MTA错误码，详情请看MTAErrorCode相关注释与自定义参数长度限制说明
- */
-+ (MTAErrorCode)trackCustomEvent:(NSString *)event_id args:(NSArray *)array appkey:(NSString *)appkey isRealTime:(BOOL)isRealTime;
-
-/**
- 开始统计自定义时长事件
- 此接口需要跟trackCustomEventEnd配对使用
- 多次调用以第一次开始时间为准
-
- @param event_id 事件的ID，ID需要先在MTA前台配置好才能生效
- @param array 事件的参数，参数需要先在MTA前台配置好才能生效
- @return MTA错误码，详情请看MTAErrorCode相关注释与自定义参数长度限制说明
- */
-+ (MTAErrorCode)trackCustomEventBegin:(NSString *)event_id args:(NSArray *)array;
-
-/**
- 开始统计自定义时长事件
- 并指定上报方式
- 此接口需要跟trackCustomEventEnd配对使用
- 多次调用以第一次开始时间为准
-
- @param event_id 事件的ID，ID需要先在MTA前台配置好才能生效
- @param array 事件的参数，参数需要先在MTA前台配置好才能生效
- @param appkey 需要上报的appKey，若传入nil，则上报到启动函数中的appkey
- @return MTA错误码，详情请看MTAErrorCode相关注释与自定义参数长度限制说明
- */
-+ (MTAErrorCode)trackCustomEventBegin:(NSString *)event_id args:(NSArray *)array appkey:(NSString *)appkey;
-
-/**
- 结束统计自定义时长事件
- 此接口需要跟trackCustomKeyValueEventBegin配对使用
- 多次调用以第一次结束时间为准
-
- @param event_id 事件的ID，ID需要先在MTA前台配置好才能生效
- @param array 事件的参数，参数需要先在MTA前台配置好才能生效
- 				参数中的各项必须跟开始统计时传入的参数一样才能正常配对
- @return MTA错误码，详情请看MTAErrorCode相关注释与自定义参数长度限制说明
- */
-+ (MTAErrorCode)trackCustomEventEnd:(NSString *)event_id args:(NSArray *)array;
-
-/**
- 结束统计自定义时长事件
- 并指定上报方式
- 此接口需要跟trackCustomKeyValueEventBegin配对使用
- 多次调用以第一次结束时间为准
-
- @param event_id 事件的ID，ID需要先在MTA前台配置好才能生效
- @param array 事件的参数，参数需要先在MTA前台配置好才能生效
- 				参数中的各项必须跟开始统计时传入的参数一样才能正常配对
- @param appkey 需要上报的appKey，若传入nil，则上报到启动函数中的appkey
- @param isRealTime 是否实时上报，若传入YES，则忽略全局上报策略实时上报。否则按照全局策略上报。
- @return MTA错误码，详情请看MTAErrorCode相关注释与自定义参数长度限制说明
- */
-+ (MTAErrorCode)trackCustomEventEnd:(NSString *)event_id args:(NSArray *)array appkey:(NSString *)appkey isRealTime:(BOOL)isRealTime;
 
 /**
  上报当前缓存的数据

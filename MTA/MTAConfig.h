@@ -151,12 +151,6 @@ typedef enum {
 @property BOOL smartReporting;
 
 /**
- 是否启动MTA的崩溃报告功能
- 默认为YES
- */
-@property BOOL autoExceptionCaught;
-
-/**
  最大上报的单条event长度，超过不上报
  单位Byte
  默认4096，即4KB
