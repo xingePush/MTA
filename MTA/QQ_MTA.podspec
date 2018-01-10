@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name						= "QQ_MTA"
-  spec.version					= "2.1.2"
+  spec.version					= "2.1.2.1"
   spec.summary					= "腾讯移动分析（MTA）"
   spec.homepage					= "http://mta.qq.com"
   spec.authors					= "tencent TEG"
