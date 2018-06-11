@@ -202,6 +202,7 @@ typedef enum {
 @property (nonatomic, copy) NSString *pushDeviceToken;
 @property (nonatomic, copy) NSString *op;
 @property (nonatomic, copy) NSString *cn;
+@property (nonatomic, copy) NSString* commonJsonAttrs;
 
 #pragma mark - 废弃API，建议替换
 @property (nonatomic, copy) NSString *customerUserID DEPRECATED_ATTRIBUTE;
