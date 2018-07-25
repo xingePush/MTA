@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.authors					= "tencent TEG"
   spec.license					= "MIT"
   spec.platform					= :ios, "8.0"
-  spec.source					= { :git => "https://github.com/tegdata/MTA.git", :tag => spec.version }
+  spec.source					= { :git => "https://github.com/xingePush/MTA.git", :tag => spec.version }
   spec.default_subspec			= 'BasicAnalysis'
 
   spec.subspec 'BasicAnalysis' do |ba|
