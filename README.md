@@ -64,10 +64,10 @@ FCM是 FireBase Cloud Messaging 的缩写，是由 Google 官方推出的推送�
 信鸽提供的可视化推送管理界面，具备推送发送，历史查询，数据分析，开发调试等功能。在信鸽官网[登入]()后即可进行使用。
 
 **[Rest API]**
-信鸽提供的后台API，包含推送消息，管理设备映射关系，数据查询等功能。方便您更好的进行定制化推送，并且和您现有的业务逻辑进行兼容。详情请阅读[信鸽后台REST_API](http://docs.developer.qq.com/xg/server_api/rest.html)
+信鸽提供的后台API，包含推送消息，管理设备映射关系，数据查询等功能。方便您更好的进行定制化推送，并且和您现有的业务逻辑进行兼容。详情请阅读[信鸽后台REST_API](http://docs.developer.qq.com/xg/server_api.html)
 
 **[移动端SDK]**
-信鸽提供了 iOS&Android 两个平台的推送SDK，SDK主要完成推送消息展现，数据统计的功能。此外SDK侧也提供了一系列的API接口，帮助您实现精准推送的业务逻辑。详情请看[Android 终端 SDK_API ](http://docs.developer.qq.com/xg/android_access/api.html)，[iOS 终端 SDK_API](http://docs.developer.qq.com/xg/ios_access/ios-sdk-api-jie-kou-wen-dang.html)
+信鸽提供了 iOS&Android 两个平台的推送SDK，SDK主要完成推送消息展现，数据统计的功能。此外SDK侧也提供了一系列的API接口，帮助您实现精准推送的业务逻辑。详情请看[Android 终端 SDK_API ](http://docs.developer.qq.com/xg/android_access/android_api.html)，[iOS 终端 SDK_API](http://docs.developer.qq.com/xg/ios_access/ios_api.html)
 
 
 ### 推送流程
