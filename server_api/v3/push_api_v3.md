@@ -33,7 +33,7 @@ https://openapi.xg.qq.com/v3/push/app
 | 参数名           | 类型     | 是否必需 | 描述                                       |
 | ------------- | ------ | ---- | ---------------------------------------- |
 | audience_type | string | 是    | 推送目标<br>1）all：全量推送<br>2）tag：标签推送<br>3）token：单设备推送<br>4）token_list：设备列表推送<br>5）account：单账号推送<br>6）account_list：账号列表推送 |
-| platform      | string | 是    | 客户端平台类型<br>1）android：安卓<br>2）ios：苹果<br>3）all：安卓&&苹果，仅支持全量推送和标签推送 |
+| platform      | string | 是    | 客户端平台类型<br>1）android：安卓<br>2）ios：苹果<br>3）all：安卓&&苹果，仅支持全量推送和标签推送（预留） |
 | message       | object | 是    | 消息体，参见<a href="#message：消息体">消息体</a> |
 | message_type  | string | 是    | 消息类型<br>1）notify：通知<br>2）message：透传消息/静默消息 |
 
@@ -184,7 +184,7 @@ Android平台具体字段如下表：
 | -------------- | ------ | ---- | ---- | ---------------------------------------- |
 | title          | string | 无    | 是    | 消息标题                                     |
 | content        | string | 无    | 是    | 消息内容                                     |
-| accept_time    | array  | 无    | 否    | 消息将在哪些时间段允许推送给用户，建议小于10个                 |
+| accept_time    | array  | 无    | 否    | 消息将在哪些时间段允许推送给用户，建议小于10个，不能为空                 |
 | n_id           | int    | 0    | 否    | 通知消息对象的唯一标识<br>1）大于0：会覆盖先前相同id的消息<br>2）等于0：展示本条通知且不影响其他消息<br>3）等于-1：将清除先前所有消息，仅展示本条消息 |
 | builder_id     | int    | 无    | 是    | 本地通知样式标识                                 |
 | ring           | int    | 1    | 否    | 是否有铃声<br>1）0：没有铃声<br>1）1：有铃声             |
