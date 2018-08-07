@@ -25,7 +25,7 @@
 * [服务端API接入](server_api.md)
   * [REST API V2](server_api/v2.md)
     * [REST API V2版本 使用指南](server_api/v2/rest.md)
-  * [REST API V3](push_faq/server_api/v3.md)
+  * [REST API V3](server_api/v3.md)
     * [REST API 概述](server_api/v3/rest_api_summary.md)
     * [Tag API](server_api/v3/tag_api_v3.md)
     * [Push API](server_api/v3/push_api_v3.md)
