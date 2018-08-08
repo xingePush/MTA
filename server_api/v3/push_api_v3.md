@@ -384,7 +384,7 @@ Push API 可选参数是除了 `audience_type`、`platform`、`message_type`、`
 | multi_pkg     | bool    | 否                | false   | 多包名推送<br>1）当app存在多个不同渠道包（例如应用宝、豌豆荚等），推送时如果是希望手机上安装任何一个渠道的app都能收到消息那么该值需要设置为true |
 | loop_times    | int     | 否                | 0       | 循环任务重复次数<br>1）仅支持全推、标签推<br>2）建议取值[1, 15] |
 | loop_interval | int     | 否                | 0       | 循环执行消息下发的间隔<br>1）必须配合loop_times使用<br>2）以天为单位，取值[1, 14]<br>3）loop_times和loop_interval一起表示消息下发任务的循环规则 |
-| environment   | string  | 否                | product | 用户指定推送环境，仅限iOS平台推送使用<br>1）product： 推送生产环境<br>2）dev： 推送开发环境 |
+| environment   | string  | 是（仅iOS平台使用）                | product | 用户指定推送环境，仅限iOS平台推送使用<br>1）product： 推送生产环境<br>2）dev： 推送开发环境 |
 |badge_type     |int      |否                 |-1        | 用户设置角标数字，仅限iOS 平台使用<br> 1)  -1：角标数字不变 <br>  2）-2:  角标数字自动加1 <br>3) >=0:设置「自定义」角标数字|
 | stat_tag      | string  | 否                | 无       | 统计标签，用于聚合统计<br>使用场景(示例)：现在有一个活动id：active_picture_123，需要给10000个设备通过单推接口（或者列表推送等推送形式）下发消息，同时设置该字段为active_picture_123，推送完成之后可以使用v3统计查询接口，根据该标签active_picture_123 查询这10000个设备的实发、抵达、展示、点击数据 |
 | seq           | int64_t | 否                | 0       | 接口调用时，在应答包中信鸽会回射该字段，可用于异步请求<br>使用场景：异步服务中可以通过该字段找到server端返回的对应应答包 |
