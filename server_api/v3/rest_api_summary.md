@@ -1,6 +1,6 @@
 # Rest API 概述（V3）
 
-## v3版本和v2版本的区别
+## V3版本和V2版本的区别
 
 - 完全基于 HTTPs，不再提供HTTP访问
 
@@ -11,6 +11,8 @@
 - API接口按照业务功能分类，类别为：Push API、Tag API、Device API、Tool API。每种类别的API接口采用相同的URL，提高接口易用性
 
 - 功能方面的改进：增加送达统计的查询功能，该接口属于工具类API，目前内测中
+
+V2版本请参考文档：https://xg.qq.com/docs/server_api/v2/rest.html
 
   ​
 
