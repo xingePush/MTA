@@ -27,39 +27,15 @@
         ]
 ```
 2.引入小米推送的jar包
-以下两个版本请根据需要选择其中之一
-
 ```js
-
-//在集成信鸽的基础上新增小米push的jar包
-compile 'com.tencent.xinge:mipush:3.2.4-beta'
-```
-```js
-/* 小米3.2.5-release版
- * 注意：若小米通道使用此版本,则信鸽sdk版本也需要同时使用v3.2.5
+/* 小米3.2.6-release版
+ * 注意：若小米通道使用此版本,则信鸽sdk版本也需要同时使用v3.2.6-release
  */
-compile 'com.tencent.xinge:mipush:3.2.5-release'
+compile 'com.tencent.xinge:mipush:3.2.6-release'
 ```
 
-3.新建一个类继承小米PushMessageReceiver，然后再Androidmanif.xml 中配置。根据小米的要求次节点必须配置
 
-```xml
-<receiver
-android:exported="true"
-android:name="完整路径+类名如：com.qq.xgdemo.receiver.MiMessageReceiver">
-<intent-filter>
-<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
-</intent-filter>
-<intent-filter>
-<action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
-</intent-filter>
-<intent-filter>
-<action android:name="com.xiaomi.mipush.ERROR" />
-</intent-filter>
-</receiver>
 
-```
-**注：**如果使用mipush:3.2.4-beta版本则不需要此步骤，只需要前两步即可
 
 ### Eclipse开发接入
 
