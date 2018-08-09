@@ -47,21 +47,17 @@
 ```
 
 2.导入华为推送相关依赖
-以下两个版本请根据需要选择其中之一
 
-```java
-//在集成信鸽的基础上新增华为push的jar包
-compile 'com.tencent.xinge:xghw:3.2.4-beta'
+
 ```
-```
-/* 华为 3.2.5-release版
- * 注意：若华为通道使用此版本,则信鸽sdk版本也需要同时使用v3.2.5
+/* 华为 3.2.6-release版
+ * 注意：若华为通道使用此版本,则信鸽sdk版本也需要同时使用v3.2.6-release
  */
-compile 'com.tencent.xinge:xghw:3.2.5-release'
+compile 'com.tencent.xinge:xghw:3.2.6-release'
 ```
 
 3.配置 <a href="#华为消息receiver">华为消息receiver</a>.
-**注：** 如果使用```xghw:3.2.4-beta```版本则不需要此步骤，只需要前两步即可
+**注：** 如果使用```xghw:3.2.4-beta```之后的版本则不需要此步骤，只需要前两步即可
 
 
 
@@ -107,7 +103,7 @@ compile 'com.tencent.xinge:xghw:3.2.5-release'
 <!-- 注：华为push 需要的 end -->
 
 ```
-3.2.配置 <a href="#华为消息receiver">华为消息receiver</a>.
+3.配置 <a href="#华为消息receiver">华为消息receiver</a>.
 
 #### 华为消息receiver
 
@@ -190,7 +186,7 @@ public class MyReceiver extends PushReceiver {
 }
 
 ```
-2. 在 ```AndroidManifest.xml``` 增加自定义 ```Receiver``` 配置如下：
+2 . 在 ```AndroidManifest.xml``` 增加自定义 ```Receiver``` 配置如下：
 
 ```xml
 <!-- xxx.xx.xx为CP自定义的广播名称，比如: com.huawei.hmssample. HuaweiPushRevicer -->
