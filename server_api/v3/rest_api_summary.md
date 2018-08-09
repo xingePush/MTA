@@ -14,6 +14,10 @@
 
 V2版本请参考文档：https://xg.qq.com/docs/server_api/v2/rest.html
 
+_**注意：推荐使用V3版本接口，V2版本接口在未来可能会进行下线**_
+
+
+
   ​
 
 ## API概述
