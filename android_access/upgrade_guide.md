@@ -193,10 +193,10 @@ android:name="com.tencent.android.tpush.SettingsContentProvider"
 android:authorities="当前应用的包名.TPUSH_PROVIDER"
 android:exported="false" />
 
-<!-- 【必须】 【注意】authorities修改为 包名.TENCENT.MID.V4, 如demo的包名为：com.qq.xgdemo-->
+<!-- 【必须】 【注意】authorities修改为 包名.TENCENT.MID.V3, 如demo的包名为：com.qq.xgdemo-->
 <provider
 android:name="com.tencent.mid.api.MidProvider"
-android:authorities="当前应用的包名.TENCENT.MID.V4"
+android:authorities="当前应用的包名.TENCENT.MID.V3"
 android:exported="true" >
 </provider>
 
@@ -246,8 +246,6 @@ android:value="YOUR_ACCESS_KEY" />
 ```
 com.tencent.android.tpush.service.XGPushServiceV4
 com.tencent.android.tpush.XGPushReceiver
-com.tencent.android.tpush.service.XGDaemonService
-com.tencent.mid.api.MidProvider
 ```
 
 
@@ -290,16 +288,6 @@ com.tencent.mid.api.MidProvider
             </intent-filter>
         </receiver>
         
-        <service
-            android:name="com.tencent.android.tpush.service.XGDaemonService"
-            android:process=":xg_service_v4" />
-        <!-- 【必须】 【注意】authorities修改为 包名.TENCENT.MID.V4, 如demo的包名为：com.qq.xgdemo-->
-        <provider
-           android:name="com.tencent.mid.api.MidProvider"
-           android:authorities="com.qq.xgdemo.TENCENT.MID.V4"
-           android:exported="true" >
-       </provider>
-       
         ```
          
 
