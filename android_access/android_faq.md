@@ -147,7 +147,7 @@ action.setIntent("xgscheme://com.xg.push/notify_detail?param1=aa&param2=bb");
 ```
 
 * 终端获取参数：
-在你跳转指定的页面onCreat方法里面：
+在你跳转指定的页面onCreate方法里面：
 ```
 Uri uri = getIntent().getData();
         if (uri != null) {                
