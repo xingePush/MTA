@@ -1,6 +1,28 @@
 # 最近更新
 
 ## Android SDK更新说明
+### Android SDK v3.2.6
+
+#### 更新时间
+
+* 2018-8-06
+
+#### 版本更新说明
+
+1. 升级小米通道，修复安全漏洞
+2. 修复已知crash
+3. 修复无法清除通知bug
+
+#### 升级提示
+
+* 建议升级！
+
+##### 下载地址：
+
+[Android SDK v3.2.6](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Push-SDK-Android-3.2.6.zip)
+
+
+
 
 ### Android SDK v3.2.5
 
