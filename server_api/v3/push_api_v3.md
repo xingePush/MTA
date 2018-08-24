@@ -240,7 +240,7 @@ Android平台具体字段如下表：
         "style_id": 1,
         "small_icon": "xg",
         "action": {
-            "action_type ": 1,
+            "action_type": 1,
             "activity": "xxx",
             "aty_attr": {
                 "if": 0,
