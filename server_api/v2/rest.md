@@ -476,7 +476,7 @@ iOS平台具体字段如下表：
 
 | 字段名 |    类型     | 默认值 | 必需 | 参数描述                                                     |
 | :----- | :---------: | :----: | :--: | ------------------------------------------------------------ |
-| aps    |    JSON     |   无   |  是  | 苹果推送服务(APNs)特有的消息体字段<br>其中比较重要的键值对:<br>alert：包含标题和消息内容(必选)<br>badge：App显示的角标数(可选),<br>category：下拉消息时显示的操作标识(可选)<br>详细介绍可以参照：[Payload](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/PayloadKeyReference.html#//apple_ref/doc/uid/TP40008194-CH17-SW1) |
+| aps    |    JSON     |   无   |  是  | 苹果推送服务(APNs)特有的消息体字段<br>其中比较重要的键值对:<br>alert：包含标题和消息内容(必选)<br>badge_type：App显示的角标数(可选),参数设置有三种情况： <br>1) -1：角标数字不变 <br>2）-2: 角标数字自动加1 <br>3) >=0:设置显示「自定义」角标数字<br>category：下拉消息时显示的操作标识(可选)<br>详细介绍可以参照：[Payload](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/PayloadKeyReference.html#//apple_ref/doc/uid/TP40008194-CH17-SW1) |
 | custom | string/JSON |   无   |  否  | 自定义下发的参数                                             |
 | xg     |   string    |   无   |  否  | 系统保留key，应避免使用                                      |
 
@@ -489,7 +489,7 @@ iOS平台具体字段如下表：
             "title":"this is a title",
             "body":"this is content"
         },
-        "badge":1,
+        "badge_type":1,
         "category":"CategoryID"
     },
     "custom":{
@@ -557,7 +557,7 @@ Android平台具体字段如下表：
 
 | 字段名 | 类型        | 默认值 | 是否必要 | 参数描述                                                     |
 | ------ | ----------- | ------ | -------- | ------------------------------------------------------------ |
-| aps    | JSON        | 无     | 是       | 苹果推送服务(APNs)特有的，<br>其中最重要的键值对:<br> content-available：标识消息类型(必须为1)<br>且不能包含alert、sound、badge字段<br>详细介绍可以参照：[Payload](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/PayloadKeyReference.html#//apple_ref/doc/uid/TP40008194-CH17-SW1) |
+| aps    | JSON        | 无     | 是       | 苹果推送服务(APNs)特有的，<br>其中最重要的键值对:<br> content-available：标识消息类型(必须为1)<br>且不能包含alert、sound、badge_type字段<br>详细介绍可以参照：[Payload](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/PayloadKeyReference.html#//apple_ref/doc/uid/TP40008194-CH17-SW1) |
 | custom | string/JSON | 无     | 否       | 自定义下发的参数                                             |
 | xg     | string      | 无     | 否       | 系统保留key，应避免使用                                      |
 
