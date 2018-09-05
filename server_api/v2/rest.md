@@ -7,7 +7,7 @@
 - 账号 API，主要完成账号的查询、删除
 - 工具类 API，用来定位问题和其他数据查询
 
-<font color=#FF0000>V2版本仅支持HTTP协议，不支持HTTPs</font>
+<font color=#FF0000>V2版本支持HTTP和HTTPs协议</font>
 
 
 ## 请求方式
