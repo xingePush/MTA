@@ -111,27 +111,6 @@
 ```
 
 
-### 自动集成
-
-使用信鸽官网的[一键集成工具](http://mta.qq.com/mta/resource/download/SDKInstaller.dmg)，仅需3步即可完成 iOS XG SDK 的接入
-
-第一步，登录 QQ（此账号下应包含需要配置的应用）
-
-![QQ登录](/assets/iOSInstallerQQ.jpg)
-
-第二步，选择应用名称，点击 ```Open My Project``` ，打开工程项目的``` .xcodeproj``` 文件
-
-![集成SDK](/assets/iOSInstallerChoice.jpg)
-
-**注意：此步骤会自动将启动代码插入到AppDelegate类中**
-
-第三步，为 ```AppDelegate``` 类添加 ```XGPushDelegate``` 协议
-
-```objective-c
-@interface AppDelegate () <XGPushDelegate>
-@end
-```
-
 
 
 ## 调试
