@@ -12,11 +12,11 @@
 
 ## 请求方式
 
-支持GET；
+支持GET;
 
 支持POST，但要求HTTP HEADER中"Content-type"字段要设置为"application/x-www-form-urlencoded"
 
-
+支持https;
 
 ## 协议描述
 
