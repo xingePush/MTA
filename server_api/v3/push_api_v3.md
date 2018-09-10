@@ -240,17 +240,17 @@ Android平台具体字段如下表：
         "style_id": 1,
         "small_icon": "xg",
         "action": {
-            "action_type": 1,
-            "activity": "xxx",
+            "action_type": 1,// 动作类型，1，打开activity或app本身；2，打开浏览器；3，打开Intent
+            "activity": "xxx",// activity属性，只针对action_type=1的情况
             "aty_attr": {
-                "if": 0,
-                "pf": 0
+                "if": 0, // Intent的Flag属性
+                "pf": 0  // PendingIntent的Flag属性
             },
             "browser": {
-                "url": "xxxx ",
-                "confirm": 1
+                "url": "xxxx ", // 仅支持http、https
+                "confirm": 1 // 是否需要用户确认
             },
-            "intent": "xxx"
+            "intent": "xxx" //SDK版本需要大于等于3.2.3，然后在客户端的intent配置data标签，并设置scheme属性
         },
         "custom_content": {
             "key1": "value1",
