@@ -33,7 +33,7 @@ https://openapi.xg.qq.com/v3/push/app
 | 参数名           | 类型     | 是否必需 | 描述                                       |
 | ------------- | ------ | ---- | ---------------------------------------- |
 | audience_type | string | 是    | 推送目标<br>1）all：全量推送<br>2）tag：标签推送<br>3）token：单设备推送<br>4）token_list：设备列表推送<br>5）account：单账号推送<br>6）account_list：账号列表推送 |
-| platform      | string | 是    | 客户端平台类型<br>1）android：安卓<br>2）ios：苹果<br>3）all：安卓&&苹果，仅支持全量推送和标签推送（预留） |
+| platform      | string | 是    | 客户端平台类型<br>1）android：安卓<br>2）ios：苹果<br>3）all：安卓&&苹果，仅支持全量推送和标签推送（预留参数，暂不可用） |
 | message       | object | 是    | 消息体，参见<a href="#message：消息体">消息体</a> |
 | message_type  | string | 是    | 消息类型<br>1）notify：通知<br>2）message：透传消息/静默消息 |
 
@@ -188,11 +188,11 @@ Android平台具体字段如下表：
 | n_id           | int    | 0    | 否    | 通知消息对象的唯一标识<br>1）大于0：会覆盖先前相同id的消息<br>2）等于0：展示本条通知且不影响其他消息<br>3）等于-1：将清除先前所有消息，仅展示本条消息 |
 | builder_id     | int    | 0    | 否    | 本地通知样式标识                                 |
 | ring           | int    | 1    | 否    | 是否有铃声<br>1）0：没有铃声<br>1）1：有铃声             |
-| ring_raw       | string | 无    | 否    | 指定Android工程里raw目录中的铃声文件名，不需要后缀名          |
+| ring_raw       | string | 无    | 否    | 指定Android工程里raw目录中的铃声文件名，不需要后缀名（注：在Android7.0及以上版本不支持）          |
 | vibrate        | int    | 1    | 否    | 是否使用震动<br>1）0：没有震动<br>2）1：有震动            |
 | lights         | int    | 1    | 否    | 是否使用呼吸灯<br>1）0：使用呼吸灯<br>2）1：不使用呼吸灯       |
 | clearable      | int    | 1    | 否    | 通知栏是否可清除                                 |
-| icon_type      | int    | 0    | 否    | 通知栏图标是应用内图标还是上传图标<br>1）0：应用内图标<br>2）1：上传图标 |
+| icon_type      | int    | 0    | 否    | 通知栏图标是应用内图标还是上传图标（注：在 7.0及以上版本上不支持）<br>1）0：应用内图标<br>2）1：上传图标 |
 | icon_res       | string | 无    | 否    | 应用内图标文件名或者下载图标的url地址                     |
 | style_id       | int    | 1    | 否    | 设置是否覆盖指定编号的通知样式                          |
 | small_icon     | string | 无    | 否    | 消息在状态栏显示的图标，若不设置，则显示应用图标                 |
