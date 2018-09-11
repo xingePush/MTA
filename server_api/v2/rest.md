@@ -398,7 +398,8 @@ Android平台具体字段如下表：
 | :------------- | :----: | :----: | :--: | ------------------------------------------------------------ |
 | title          | string |   无   |  是  | 消息标题                                                     |
 | content        | string |   无   |  是  | 消息内容                                                     |
-| builder_id     |  int   |   无   |  是  | 本地通知样式标识                                             |
+| xg_media_resources          | array |   无   |  是  | 富媒体元素地址，建议小于5个                                                    |
+| builder_id     |  int   |   无   |  否  | 本地通知样式标识                                             |
 | n_id           |  int   |   0    |  否  | 通知消息对象的唯一标识<br><font size=0.5 color=#ff6a6a>1.大于0，会覆盖先前相同id的消息；<br>2.等于0，展示本条通知且不影响其他消息；<br>3.等于-1，将清除先前所有消息，仅展示本条消息</font> |
 | ring           |  int   |   1    |  否  | 是否有铃声<br>0, 没有铃声<br>1, 有铃声                       |
 | ring_raw       | string |   无   |  否  | 指定Android工程里raw目录中的铃声文件名，不需要后缀名         |
@@ -419,6 +420,7 @@ Android平台具体字段如下表：
 {
     "title ":"xxx",
     "content ":"xxxxxxxxx",
+    "xg_media_resources"：“xxx”,//富媒体元素地址，例如https://www.xx.com/img/bd_logo1.png?qua=high
     "n_id":0,
     "builder_id":0,
     "ring":1,
