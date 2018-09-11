@@ -205,6 +205,7 @@ Android平台具体字段如下表：
 ```json
 {
     "title": "xxx",
+    "xg_media_resources": ["xxx1","xxx2"] , //此处填富媒体元素地址，例如https://www.xx.com/img/bd_logo1.png?qua=high
     "content": "xxxxxxxxx",
     "accept_time": [
         {
