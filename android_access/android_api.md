@@ -505,7 +505,7 @@ message：接收到消息结构体，其中XGPushTextMessage的方法列表如�
 
 |方法名|返回值|默认值|描述|
 |----|--------|-----|---|
-|etContent()|String|""|消息正文内容，通常只需要下发本字段即可|
+|getContent()|String|""|消息正文内容，通常只需要下发本字段即可|
 |getCustomContent()|String|""|消息自定义key-value|
 |getTitle()|String|""|消息标题（注意：从前台下发应用内消息字中的描述不属于标题|
 
