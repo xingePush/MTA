@@ -585,55 +585,6 @@ message：接收到消息结构体，其中XGPushTextMessage的方法列表如�
         XGPushManager.addLocalNotification(context,local_msg);
         ```
         
-##自定义通知样式
-用户可以根据自行需要设置通知样式，但由于目前定制ROM的限制，部分接口无法适配全部机型。
-
- ```java
-  XGCustomPushNotificationBuilder build = new  XGCustomPushNotificationBuilder();
-  
-		build.setSound(
-				RingtoneManager.getActualDefaultRingtoneUri(
-				
-						getApplicationContext(), RingtoneManager.TYPE_ALARM))
-				
-				.setDefaults(Notification.DEFAULT_VIBRATE) // 振动
-				
-				.setFlags(Notification.FLAG_NO_CLEAR); // 是否可清除
-				
-		// 设置自定义通知layout,通知背景等可以在layout里设置
-		
-		build.setLayoutId(R.layout.notification);
-		
-		// 设置自定义通知内容id
-		
-		build.setLayoutTextId(R.id.content);
-		
-		// 设置自定义通知标题id
-		
-		build.setLayoutTitleId(R.id.title);
-		 
-		
-		// 设置自定义通知图片资源
-		
-		build.setLayoutIconDrawableId(R.drawable.logo);
-		
-		// 设置状态栏的通知小图标
-		
-		build.setIcon(R.drawable.right);
-		
-		// 设置时间id
-		
-		build.setLayoutTimeId(R.id.time);
-		
-		// 若不设定以上自定义layout，又想简单指定通知栏图片资源
-		
-		build.setNotificationLargeIcon(R.drawable.ic_action_search);
-		
-		// 客户端保存build_id
-		
-		XGPushManager.setPushNotificationBuilder(this, build_id, build);
-		
-		```
 
 ## 获取设备Token
 
