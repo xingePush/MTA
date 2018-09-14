@@ -2,7 +2,7 @@
 
 ## V3版本和V2版本的区别
 
-
+- 完全基于HTTPs,不再提供HTTP访问
 - 支持POST方式访问，不再提供GET方式访问
 
 - 使用 HTTP Basic Authentication 的方式做访问授权。 API 请求可以使用常见的 HTTP 工具来完成，比如：curl，postman等
