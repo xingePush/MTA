@@ -43,9 +43,11 @@ AndroidStudio 上可以使用 jcenter 远程仓库自动接入，不需要在项
         ......   
     
     //信鸽jar，不包含厂商通道
-    //compile 'com.tencent.xinge:xinge:4.0.3-Beta'
+    compile  'com.tencent.xinge:xinge:4.0.3-release'
+    //compile'com.tencent.xinge:xinge:4.2.0-beta'
     //信鸽jar，包含厂商通道
-    compile 'com.tencent.xinge:xinge:4.0.3-otherpush-Beta'
+    compile 'com.tencent.xinge:xinge:4.0.3-otherpush-release'
+    //compile 'com.tencent.xinge:xinge:4.2.0-otherpush-beta'
     //jg包
     compile'com.tencent.jg:jg:1.1'
     //wup包
