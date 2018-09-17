@@ -1,6 +1,55 @@
 # 最近更新
 
 ## Android SDK更新说明
+### Android SDK v4.2.0（Beta）
+
+#### 更新时间
+
+* 2018-9-13
+
+#### 版本更新说明
+
+1. 支持富媒体通知栏推送，内容丰富点击率更高
+2. 支持批量账号API，更方便的配置推送对象
+3. 修复已知问题
+
+#### 升级提示
+
+* 建议升级！
+
+##### 下载地址：
+
+[Android SDK v4.2.0](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Beta-SDK-Android-4.2.0.zip)
+
+
+
+
+
+### Android SDK v4.0.3
+
+#### 更新时间
+
+* 2018-9-13
+
+#### 版本更新说明
+
+1. 支持厂商通道动态灵活加载，减少包体量
+2. 适配最新Android P
+3. 增加标签批量操作API
+4. 联合保活优化
+
+#### 升级提示
+
+* 建议升级！
+
+##### 下载地址：
+
+[Android SDK v4.0.3](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Push-SDK-Android-4.0.3.zip)
+
+
+
+
+
 ### Android SDK v3.2.6
 
 #### 更新时间
@@ -12,10 +61,6 @@
 1. 升级小米通道，修复安全漏洞
 2. 修复已知crash
 3. 修复无法清除通知bug
-
-#### 升级提示
-
-* 建议升级！
 
 ##### 下载地址：
 
@@ -36,9 +81,6 @@
   2. 厂商通道漏洞修复
   3. 离线时间失效问题修复
 
-#### 升级提示
-
-* 建议升级！
 
 ##### 下载地址：
 
@@ -59,10 +101,6 @@
 3. 解决部分机型Android 8.0无法弹出通知问题
 4. 其他常见问题修复
 
-#### 升级提示
-
-* 建议升级！
-
 ##### 下载地址：
 
 [Android SDK v3.2.3](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Push-SDK-Android-3.2.3.zip)
@@ -79,9 +117,6 @@
 3. 增加标签批量操作API
 4. 联合保活优化
 
-#### 升级提示
-
-* 建议升级！
 
 ##### 下载地址：
 
@@ -101,18 +136,35 @@
 3. FCM版本升级及crash修复
 4. 支持厂商通道展示、点击数据上报（目前还未充分与后台联调数据，下周还会持续验证数据）
 
-#### 升级提示
-
-* 建议升级！
 
 ##### 下载地址：
 
 [Android SDK v3.2.4（beta）](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Beta-SDK-Android-3.2.4.zip)
 
 ## iOS SDK 更新说明
+### iOS SDK v3.3.1
 
-### iOS SDK v3.2.0\(beta\)
+#### 更新时间
 
+* 2018-9-11
+
+#### 版本更新说明
+
+1. 支持富媒体通知栏推送，内容丰富点击率更高
+2. 支持iOS 12，推送到达率更高、更稳定
+3. 支持批量账号API，更方便的配置推送对象
+
+#### 升级提示
+
+建议升级！
+
+##### 下载地址：
+
+[iOS SDK v3.3.1](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Beta-SDK-iOS-3.3.1.zip)
+
+
+
+### iOS SDK v3.2.0
 当前版本SDK上线新功能
 
 | 功能描述 | 使用条件 | 接口调用方法 | 管理台位置 |
@@ -130,33 +182,10 @@
 3. 增加角标设置接口，实现角标+1 
 4. 增加单推统计逻辑
 
-#### 升级提示
-
-建议升级！
 
 ##### 下载地址：
 
 [iOS SDK v3.2.0](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Beta-SDK-iOS-3.2.0.zip)
-
-### iOS SDK v3.1.0
-
-#### 更新时间
-
-* 2018-4-11
-
-#### 版本更新说明
-
-1. 增加消息回执统计SDK\(iOS 10+\)
-2. 自动化Device Token上报
-
-#### 升级提示
-
-建议升级！
-
-##### 下载地址：
-
-[iOS SDK v3.1.0](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Push-SDK-iOS-3.1.0.zip)
-
 ### iOS SDK v3.1.1
 
 #### 更新时间
@@ -170,11 +199,27 @@
 3. 绑定接口问题修复
 4. 注销接口问题修复
 
-#### 升级提示
-
-建议升级！
 
 ##### 下载地址：
 
 [iOS SDK v3.1.1](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Beta-SDK-iOS-3.1.1.zip)
+
+
+### iOS SDK v3.1.0
+
+#### 更新时间
+
+* 2018-4-11
+
+#### 版本更新说明
+
+1. 增加消息回执统计SDK\(iOS 10+\)
+2. 自动化Device Token上报
+
+
+##### 下载地址：
+
+[iOS SDK v3.1.0](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Push-SDK-iOS-3.1.0.zip)
+
+
 
