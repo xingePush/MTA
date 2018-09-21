@@ -23,7 +23,7 @@
 
 在这个部分，我们将介绍信鸽推送的流程，包含「消息下发」和「数据上报」两个链路。
 
-![](/assets/信鸽服务流程总览.png)
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fvgxxr3qyxj30rm132wg4.jpg))
 
 
 ## 3.基本概念解释
