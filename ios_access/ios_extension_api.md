@@ -18,13 +18,14 @@
 **说明 ：
 为了使用extension SDK，操作步骤如下：**
 1.新增Target
-![](https://ws1.sinaimg.cn/large/006tKfTcgy1ftwbphy06ej30sc0kn0y8.jpg)
+![](/assets/iOSExtension/extension.jpg)
 
 2.配置Target，添加依赖库文件：libXGExtension.a, libz.tbd, libsqlite3.tbd
 
-![](https://ws4.sinaimg.cn/large/006tKfTcgy1ftwbsl0ei3j30sj0ahtb1.jpg)
+![](/assets/iOSExtension/extensionConfig.jpg)
 3.调用SDK统计上报接口
 **示例**
+
 ```Objective-C
 - (void)didReceiveNotificationRequest:(UNNotificationRequest *)request
   withContentHandler:(void (^)(UNNotificationContent *
