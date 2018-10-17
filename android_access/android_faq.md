@@ -254,7 +254,7 @@ XGPushConfig.setMiPushAppKey(this,MIPUSH_APPKEY);
 **问: 目前是否适配Android P？**
 
 
-答: 4.X以上版本已经兼容了 android P，默认支持HTTPS，如果用户要使用HTTP，需要自行配置（[点击查看配置方法](AndroidP兼容方法.md)）
+答: 4.X以上版本已经兼容了 Android P，默认支持HTTPS，如果要使用HTTP，需要自行配置（[点击查看配置方法](AndroidP兼容方法.md)）
 
 
 
