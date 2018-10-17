@@ -251,6 +251,12 @@ XGPushConfig.setMiPushAppKey(this,MIPUSH_APPKEY);
 ## 常见问题FAQ
 
 ---
+**问: 目前是否适配Android P？**
+
+
+答: 4.X以上版本已经兼容了 android P，默认支持HTTPS，如果用户要使用HTTP，需要自行配置（[点击查看配置方法](AndroidP兼容方法.md)）
+
+
 
 **问: 集成小米通道，没有点击回调，怎么实现点击通知栏信息跳转到指定页面？**
 
