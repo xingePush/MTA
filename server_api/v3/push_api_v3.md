@@ -244,8 +244,8 @@ Android平台具体字段如下表：
         "small_icon": "xg",
         "action": {
             "action_type": 1,// 动作类型，1，打开activity或app本身；2，打开浏览器；3，打开Intent
-            "activity": "xxx",// activity属性，只针对action_type=1的情况
-            "aty_attr": {
+            "activity": "xxx",
+            "aty_attr": {// activity属性，只针对action_type=1的情况
                 "if": 0, // Intent的Flag属性
                 "pf": 0  // PendingIntent的Flag属性
             },
