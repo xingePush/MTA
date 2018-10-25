@@ -522,7 +522,26 @@ Log.d("TPush", "注册失败，错误码：" + errCode + ",错误信息：" + ms
 10-09 20:08:46.922 24290-24303/com.qq.xgdemo I/XINGE: [TPush] get RegisterEntity:RegisterEntity [accessId=2100250470, accessKey=null, token=5874b7465d9eead746bd9374559e010b0d1c0bc4, packageName=com.qq.xgdemo, state=0, timestamp=1507550766, xgSDKVersion=3.11, appVersion=1.0]
 10-09 20:08:47.232 24290-24360/com.qq.xgdemo D/TPush: 注册成功，设备token为：5874b7465d9eead746bd9374559e010b0d1c0bc4
 ```
+**厂商通道token注册**
 
+1.开启厂商通道初始化，等待云控下载对应设备的厂商。
+以小米为例，下载成功的日志如下：
+```xml
+10-25 15:16:31.067 16551-16551/? D/XINGE: [DownloadService] onCreate()
+10-25 15:16:31.073 16551-16757/? D/XINGE: [DownloadService] action:onHandleIntent
+10-25 15:16:31.083 16551-16757/? V/XINGE: [CloudCtrDownload] Create downloadControl
+10-25 15:16:31.089 16551-16757/? I/XINGE: [CloudCtrDownload] action:download - url:https://pingjs.qq.com/xg/Xg-Xm-plug-1.0.2.pack, saveFilePath:/data/user/0/com.qq.xgdemo1122/app_dex/XG/5/, fileName:Xg-Xm-plug-1.0.2.pack
+10-25 15:16:31.097 16551-16757/? V/XINGE: [CloudCtrDownload] Download file: Xg-Xm-plug-1.0.2.pack
+10-25 15:16:31.641 16551-16757/? D/XINGE: [DownloadService] download file Succeed
+10-25 15:16:31.650 16551-16757/? D/XINGE: [CloudCtrDownload] Download succeed.
+10-25 15:16:31.653 16551-16551/? D/XINGE: [CloudControlDownloadReceiver] onReceive
+10-25 15:16:31.673 16551-16738/? I/test: Download file SuccessXg-Xm-plug-1.0.2.pack to /data/user/0/com.qq.xgdemo1122/app_dex/XG/5/
+```
+2.观察到下载完成的日志后杀死应用进程，再次启动应用即可完成注册：
+```xml
+10-25 15:34:26.423 18700-18700/? D/TPush: +++ register push sucess. token:22dc455f79d36dec1065418e1d284639bac776b4
+10-25 15:34:26.432 18700-18731/? I/XINGE: [XGOtherPush] other push token is : lYDvOWispXGoVADhRyiVdw3krLIolEd21JqdmjqBqDISK+gwl/PBm3tA9U43jxfH other push type: xiaomi
+```
 **设置账号**
 
 ```java
