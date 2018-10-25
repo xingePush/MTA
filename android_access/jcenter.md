@@ -49,7 +49,7 @@ AndroidStudio 上可以使用 jcenter 远程仓库自动接入，不需要在项
     //完整的信鸽依赖四个都必须有，如果发生依赖冲突请根据对应的依赖版本号选择高版本的依赖。（使用jcenter自动接入请确认libs中没有信鸽的相关jar包） 
     
     //信鸽jar
-    compile 'com.tencent.xinge:xinge:3.2.6-release'
+    compile 'com.tencent.xinge:xinge:3.2.7-Release'
     //jg包
     compile'com.tencent.jg:jg:1.1'
     //wup包
