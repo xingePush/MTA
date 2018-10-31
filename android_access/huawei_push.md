@@ -184,11 +184,11 @@ public class MyReceiver extends PushReceiver {
 }
 
 ```
-2 . 在 ```AndroidManifest.xml``` 增加自定义 ```Receiver``` 配置如下：
+2 . 在 ```AndroidManifest.xml``` 增加 ```Receiver``` 配置如下：
 
 ```xml
-<!-- xxx.xx.xx为CP自定义的广播名称，比如: com.huawei.hmssample. HuaweiPushRevicer -->
-        <receiver android:name=".MyReceiver" >
+
+        <receiver android:name="com.tencent.android.hwpush.HWPushMessageReceiver" >
             <intent-filter>
 
                 <!-- 必须,用于接收TOKEN -->
