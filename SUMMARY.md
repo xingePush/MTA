@@ -12,6 +12,7 @@
   * [Android SDK 常见问题](android_access/android_faq.md)
   * [Android SDK Demo使用方法](android_access/xg_demo.md)
   * [Android SDK 错误码对照表](android_access/android_returncode.md)
+  * [Android P 兼容方法](android_access/android_p_compatibility.md)
 * [iOS接入](ios_access.md)
   * [iOS 推送服务介绍](ios_access/ios_push_introduction.md)
   * [iOS SDK 集成指南](ios_access/ios_access_guide.md)
@@ -33,5 +34,5 @@
   * [Push API](server_api/v3/push_api_v3.md)
 * [最近更新](sdk_update.md)
 * [名词解释](noun_explanation.md)
-* [技术支持](technical_support.md)
+* Android P 兼容方法
 
