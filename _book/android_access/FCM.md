@@ -28,15 +28,15 @@ classpath 'com.google.gms:google-services:3.1.0'
 在应用级的build.gradle文件中添加依赖
 ```xml
 
-compile 'com.tencent.xinge:fcm:3.1.2-1-release'
+compile 'com.tencent.xinge:fcm:4.0.3'
 
-compile 'com.google.firebase:firebase-messaging:9.0.0'
+compile 'com.google.firebase:firebase-messaging:12.0.1'
 
 注：云消息传递
 
-compile 'com.google.android.gms:play-services-base:9.0.0'
+compile 'com.google.android.gms:play-services-base:12.0.1'
 
-注：Google配置google-play-services网（信鸽只用到了检测设备是否支持google service功能，要求版本大于9.0.0）：https://developers.google.com/android/guides/setup#add_google_play_services_to_your_project
+注：Google配置google-play-services网（信鸽只用到了检测设备是否支持google service功能，要求版本大于12.0.1）：https://developers.google.com/android/guides/setup#add_google_play_services_to_your_project
 
  //并在应用级的gradle文件的最后一行代码中新增
 
@@ -49,7 +49,7 @@ apply plugin: 'com.google.gms.google-services'
 
 1.配置google-services.json 文件，放在assets的目录下
 
-2.把Xg4FCM-v3.xxx.jar，firebase-common-9.0.0.jar，firebase-iid-9.0.0.jar，firebase-messaging-9.0.0.jar，play-services-base-9.0.0.jar，play-services-basement-9.0.0.jar放到libs目录下
+2.把Xg4FCM-v4.xxx.jar，firebase-common-12.0.1.jar，firebase-iid-12.0.1.jar，firebase-messaging-12.0.1.jar，play-services-base-12.0.1.jar，play-services-basement-12.0.1.jar放到libs目录下
 
 3.在AndroidManifest.xml中添加以下配置：
 
@@ -103,7 +103,7 @@ apply plugin: 'com.google.gms.google-services'
 ```
 
 ##启用FCM推送
-
+在项目设置里，云消息传递获取服务器秘钥并提供给[信鸽技术支持](http://xg.qq.com/app/ctr_feedback/index)
 在调用信鸽注册代码（XGPushManager.registerPush）前面添加以下代码设置
 
 ```java
