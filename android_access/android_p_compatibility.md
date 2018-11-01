@@ -1,6 +1,6 @@
-# 1.Demo配置
+# Demo配置
 
-## 1.1 TLS默认启用
+## TLS默认启用
 在res目录下的xml目录添加文件xg_network_security_config.xml，内容为：
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -16,11 +16,11 @@
 ```xml
 android:networkSecurityConfig="@xml/xg_network_security_config"
 ```
-##1.2 添加使用Apache HTTP client库
+## 添加使用Apache HTTP client库
 
 在AndroidManifest的application节点内添加以下配置即可
 ```xml
 <uses-library android:name="org.apache.http.legacy" android:required="false"/>
 ```
-## 1.3 修改compileSdk和targetSdk
+## 修改compileSdk和targetSdk
 编译APK时使用compileSdkVersion和targetSdkVersion都使用28
