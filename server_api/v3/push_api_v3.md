@@ -470,7 +470,7 @@ Postman-Token: 4b82a159-afdd-4f5c-b459-de978d845d2f
     "push_id": "3895624686"
 }
 ```
-#### iO单设备推送请求消息
+#### iOS单设备推送请求消息
 
 ```json
 
