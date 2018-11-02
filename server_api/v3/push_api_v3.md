@@ -273,6 +273,7 @@ iOS平台具体字段如下表：
 | custom | string/JSON | 无    | 否    | 自定义下发的参数                                 |
 | xg     | string      | 无    | 否    | 系统保留key，应避免使用                            |
 
+
 完整的消息示例如下：
 
 ```json
@@ -359,6 +360,8 @@ Android平台具体字段如下表：
 | custom | string/JSON | 无    | 否    | 自定义下发的参数                                 |
 | xg     | string      | 无    | 否    | 系统保留key，应避免使用                            |
 
+
+
 具体完整示例：
 
 ```json
@@ -414,7 +417,7 @@ Push API 可选参数是除了 `audience_type`、`platform`、`message_type`、`
 
 ### Push API 请求完整示例
 
-#### 标签推送请求消息
+#### Android标签推送请求消息
 
 ```json
 POST /v3/push/app HTTP/1.1
@@ -467,7 +470,59 @@ Postman-Token: 4b82a159-afdd-4f5c-b459-de978d845d2f
     "push_id": "3895624686"
 }
 ```
+#### iO单设备推送请求消息
 
+```json
+
+POST /v3/push/app HTTP/1.1
+Host: openapi.xg.qq.com
+Content-Type: application/json
+Authorization: Basic ODhjNzE1Mzc1MDQ0ZDowNGM4NmNhZmI0ZTMxZDU4M2UzYjg0M2VhMDc4YTU5ZQ==
+Cache-Control: no-cache
+Postman-Token: 71670b5b-3149-4883-a427-d75cf9f42188
+
+{
+ 
+    "platform": "ios",
+    "audience_type": "token",
+    "environment":"dev",
+    "token_list": [ "55c2ddba664e9abcacea7daab0887939893b18e1a2cf4475c5382f5bcb2ab25b"],
+    "message_type":"notify",
+    "message":{
+     "title": "xxx",
+    "content": "https://xg.qq.com/docs/ios_access/ios_faq.html",
+    "ios":{
+        "aps": {
+            "alert": {
+                "subtitle": "my subtitle"
+            },
+            "badge_type": -2,
+            "sound":"Tassel.wav",
+            "category": "INVITE_CATEGORY"
+            
+        },
+        "custom1": "bar",
+        "custom2": [
+            "bang",
+            "whiz"
+        ],
+        "xg": "oops"
+    }
+ }
+}
+```
+#### 单设备推送应答消息
+
+```json
+{
+    "seq": 0,
+    "push_id": "427184209",
+    "ret_code": 0,
+    "environment": "dev",
+    "err_msg": "",
+    "result": "[0]"
+}
+```
 
 
 ## 账号类型
