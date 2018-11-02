@@ -207,6 +207,23 @@ String s = clickedResult.getContent();
 **注：如果需要通过点击回调获取参数或者跳转自定义页面，可以通过使用Intent来实现，[点击查看教程](http://docs.developer.qq.com/xg/android_access/android_faq.html#%E6%B6%88%E6%81%AF%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6%E4%BB%A5%E5%8F%8A%E8%B7%B3%E8%BD%AC%E9%A1%B5%E9%9D%A2%E6%96%B9%E6%B3%95)**
 
 ### 调试过程中可能遇到的otherpushToken = null的问题
+*  4.X的otherpush版本检查是否开启厂商通道初始化代码，在你的Application的attachBaseContext函数里面增加
+
+ ```
+ StubAppUtils.attachBaseContext(context);
+ ```
+*  4.X的otherpush版本，等待云控成功下载对应设备的厂商dex包后，需杀死应用进程，并再次启动应用才能完成注册。下载完成的日志如下：
+  ```xml
+10-25 15:16:31.067 16551-16551/? D/XINGE: [DownloadService] onCreate()
+10-25 15:16:31.073 16551-16757/? D/XINGE: [DownloadService] action:onHandleIntent
+10-25 15:16:31.083 16551-16757/? V/XINGE: [CloudCtrDownload] Create downloadControl
+10-25 15:16:31.089 16551-16757/? I/XINGE: [CloudCtrDownload] action:download - url:https://pingjs.qq.com/xg/Xg-Xm-plug-1.0.2.pack, saveFilePath:/data/user/0/com.qq.xgdemo1122/app_dex/XG/5/, fileName:Xg-Xm-plug-1.0.2.pack
+10-25 15:16:31.097 16551-16757/? V/XINGE: [CloudCtrDownload] Download file: Xg-Xm-plug-1.0.2.pack
+10-25 15:16:31.641 16551-16757/? D/XINGE: [DownloadService] download file Succeed
+10-25 15:16:31.650 16551-16757/? D/XINGE: [CloudCtrDownload] Download succeed.
+10-25 15:16:31.653 16551-16551/? D/XINGE: [CloudControlDownloadReceiver] onReceive
+10-25 15:16:31.673 16551-16738/? I/test: Download file SuccessXg-Xm-plug-1.0.2.pack to /data/user/0/com.qq.xgdemo1122/app_dex/XG/5/
+```
 
 **\[小米通道排查路径\]**
 
@@ -230,7 +247,9 @@ XGPushConfig.setMiPushAppId(this,MIPUSH_APPID);
 XGPushConfig.setMiPushAppKey(this,MIPUSH_APPKEY);
 ```
 
-* APP包名是否和小米开推送平台注册的包名一致
+* APP包名是否和小米开放推送平台、信鸽管理台注册的包名一致
+
+
 * 通过实现自定义的继承PushMessageReceiver的广播来监听小米的注册结果，查看注册返回码
 * 启动logcat，观察tag为PushService的日志，看看有什么错误信息
 
@@ -239,7 +258,7 @@ XGPushConfig.setMiPushAppKey(this,MIPUSH_APPKEY);
 * 检查信鸽SDK版本是否为V3.2.0以上版本以及 华为手机中【设置】->【应用管理】->【华为移动服务】的版本信息是否大于2.5.3
 * 按照开发文档华为通道接入指南部分检查manifest文件配置
 * 在信鸽注册之前是否启动了第三方推送，以及华为APPID是否配置正确
-* APP的包名和华为推送官网上的包名是否一致
+* APP的包名和华为推送官网、信鸽管理台注册包名是否一致
 * 在注册代码之前调用：XGPushConfig.setHuaweiDebug\(true\),手动确认给应用存储权限，然后查看SD卡目录下的hauwei.txt文件内输出的华为注册失败的错误原因，然后根据华为开发文档对应的错误码查找原因
 * cmd里执行adb shell setprop log.tag.hwpush VERBOSE和
   adb shell logcat -v time &gt; D:/log.txt 开始抓日志，然后进行测试，测完再关闭cmd窗口。将log发给技术支持
