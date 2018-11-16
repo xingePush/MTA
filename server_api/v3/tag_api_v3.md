@@ -136,8 +136,8 @@ Tag API 实际例子
   {   
     "operator_type": 9,
     "platform": "android",
-    "tag_list": ["tag1","tag2"],
-    "token_list": ["token1","token2"]
+    "tag_token_list":  [["tag1","token1"],["tag2","token2"]]
+ 
   }
   ```
 
@@ -147,8 +147,7 @@ Tag API 实际例子
   {   
     "operator_type": 10,
     "platform": "android",
-    "tag_list": ["tag1","tag2"],
-    "token_list": ["token1","token2"]
+    "tag_token_list":  [["tag1","token1"],["tag2","token2"]]
   }
   ```
 
