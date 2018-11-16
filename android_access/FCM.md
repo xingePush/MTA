@@ -27,7 +27,8 @@ classpath 'com.google.gms:google-services:3.1.0'
 ```
 在应用级的build.gradle文件中添加依赖
 ```xml
-
+//信鸽与FCM的jar须配对使用，信鸽sdk使用4.x版本，FCM使用4.0.3版本，信鸽使用3.x版本，FCM使用3.2.7-beta版本
+//compile 'com.tencent.xinge:fcm:3.2.7-beta'
 compile 'com.tencent.xinge:fcm:4.0.3'
 
 compile 'com.google.firebase:firebase-messaging:12.0.1'
