@@ -48,7 +48,7 @@ Push API 提供了多种推送目标的，比如：全量、标签、单设备�
 | 推送目标         | 描述     | 必需参数及使用说明                                |
 | ------------ | ------ | ---------------------------------------- |
 | all          | 全量推送   | 无                                        |
-| tag          | 标签推送   | `tag_list`<br>1）推送 tag1 和 tag2 的设备<br>{“tags”:[“tag1”,”tag2”],”op”:”AND”}<br>2）推送 tag1 或 tag 的设备<br>{“tags”:[“tag1”,“tag2”],”op”:“OR”} |
+| tag          | 标签推送   | `tag_list`<br>1）推送 tag1 和 tag2 的设备<br>{“tags”:[“tag1”,”tag2”],”op”:”AND”}<br>2）推送 tag1 或 tag 的设备<br>{“tags”:[“tag1”,“tag2”],”op”:“OR”}<br>3) 标签列表不能超过512个字符|
 | token        | 单设备推送  | `token_list`<br>1）如果该参数包含多个token 只会推送第一个token<br>2）格式eg：[“token1”]<br>3）token字符串长度不能超过64 |
 | token_list   | 设备列表群推 | `token_list`<br>1）最多1000 个token<br>2）格式eg：[“token1”,”token2”]<br>3）token字符串长度不能超过64<br>`push_id`<br>1）第一次推送该值填0，系统会创建对应的推送任务，并且返回pushid：123<br>2）后续推送push_id 填123(同一个文案）表示使用与123 id 对应的文案进行推送 |
 | account      | 单账号推送  | `account_list`<br>1）该参数有多个账号时，仅推送第一个账号<br>2）格式eg：[“account1”] |
