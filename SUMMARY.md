@@ -35,4 +35,5 @@
   * [Push API](server_api/v3/push_api_v3.md)
 * [最近更新](sdk_update.md)
 * [名词解释](noun_explanation.md)
+* [常见问题FAQ](chang-jian-wen-ti-faq.md)
 
