@@ -53,7 +53,7 @@
 /* 华为 3.2.7-release版
  * 注意：若华为通道使用此版本,则信鸽sdk版本也需要同时使用v3.2.7-Release
  */
-compile 'com.tencent.xinge:xghw:3.2.7-release'
+compile 'com.tencent.xinge:xghw:3.2.8-release'
 ```
 
 
