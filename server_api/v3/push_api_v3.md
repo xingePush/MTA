@@ -391,11 +391,12 @@ Push API 可选参数是除了 `audience_type`、`platform`、`message_type`、`
 | loop_times    | int     | 否                | 0       | 循环任务重复次数<br>1）仅支持全推、标签推<br>2）建议取值[1, 15] |
 | loop_interval | int     | 否                | 0       | 循环执行消息下发的间隔<br>1）必须配合loop_times使用<br>2）以天为单位，取值[1, 14]<br>3）loop_times和loop_interval一起表示消息下发任务的循环规则 |
 | environment   | string  | 是（仅iOS平台使用）                | product | 用户指定推送环境，仅限iOS平台推送使用<br>1）product： 推送生产环境<br>2）dev： 推送开发环境 |
-|badge_type     |int      |否                 |-1        | 用户设置角标数字，仅限iOS 平台使用,放在aps字段内<br> 1)  -1：角标数字不变 <br>  2）-2:  角标数字自动加1 <br>3) >=0:设置「自定义」角标数字|
+|badge_type     |int      |否                 |-1        | 用户设置角标数字，仅限iOS 平台使用,放在aps字段内<br> 1)  -1:角标数字不变 <br>  2) -2:角标数字自动加1 <br>3) >=0:设置「自定义」角标数字|
 | stat_tag      | string  | 否                | 无       | 统计标签，用于聚合统计<br>使用场景(示例)：现在有一个活动id：active_picture_123，需要给10000个设备通过单推接口（或者列表推送等推送形式）下发消息，同时设置该字段为active_picture_123，推送完成之后可以使用v3统计查询接口，根据该标签active_picture_123 查询这10000个设备的实发、抵达、展示、点击数据 |
 | seq           | int64_t | 否                | 0       | 接口调用时，在应答包中信鸽会回射该字段，可用于异步请求<br>使用场景：异步服务中可以通过该字段找到server端返回的对应应答包 |
 | tag_list      | object  | 仅标签推送必需          | 无       | 1）推送 tag1 和 tag2 的设备：{“tags”:[“tag1”,”tag2”],”op”:”AND”}<br>2）推送 tag1 或 tag2 的设备： {“tags”:[“tag1”,“tag2”],”op”:“OR”} |
 | account_list  | array   | 单账号推送、账号列表推送时必需  | 无       | 若单账号推送<br>1）要求 audience_type=account<br>2）参数格式：[“account1”]<br>若账号列表推送<br>1）参数格式：[“account1”,”account2”]<br>2）最多1000 个account |
+| account_push_type  | int     | 单账号推送时可选         | 0       |1) 0: 往单个账号的最新的device上推送信息<br>2) 1: 往单个账号关联的所有device设备上推送信息|
 | account_type  | int     | 单账号推送时可选         | 0       | 1）账号类型，参考后面账号说明<br>2）必须与账号绑定时设定的账号类型一致   |
 | token_list    | array   | 单设备推送、设备列表推送时必需  | 无       | 若单设备推送<br>1）要求 audience_type=token<br>2）参数格式：[“token1”]<br>若设备列表推送<br>1）参数格式：[“token1”,”token2”]<br>2）最多 1000 个 token |
 | push_id       | string  | 账号列表推送、设备列表推送时必需 | 无       | 账号列表推送和设备列表推送时，第一次推送该值填0，系统会创建对应的推送任务，并且返回对应的pushid：123，后续推送push_id填123(同一个文案）表示使用与123 id 对应的文案进行推送。(注：文案的有效时间由前面的expire_time 字段决定） |
