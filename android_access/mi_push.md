@@ -28,7 +28,7 @@
 ```
 2.引入小米推送的jar包
 ```js
-/* 小米3.2.7-release版
+/* 小米3.2.8-release版
  * 注意：若小米通道使用此版本,则信鸽sdk版本也需要同时使用v3.2.7-Release
  */
 compile 'com.tencent.xinge:mipush:3.2.8-release'
