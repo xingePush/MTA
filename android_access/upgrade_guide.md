@@ -53,7 +53,7 @@ AndroidStudio 上可以使用 jcenter 远程仓库自动接入，不需要在项
     //wup包
     compile 'com.tencent.wup:wup:1.0.0.E-release'
     //mid包
-    compile 'com.tencent.mid:mid:4.0.7'
+    compile 'com.tencent.mid:mid:4.0.7-Release'
         
     }
 ```
