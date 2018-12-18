@@ -34,12 +34,27 @@
 ---
 ## 常见问题
 
+**问: 生产环境推送收不到？**
+
+
+答: 生产环境的测试满足条件：App是ad-hoc打包/App Store版本（发布证书 Production），上传了发布证书并验证通过。
+
 
 **问: 目前是否适配Android P？**
 
 
-答: 4.X以上版本已经兼容了 Android P，默认支持HTTPS，如果要使用HTTP，需要自行配置（[点击查看配置方法](http://docs.developer.qq.com/xg/android_access/android_p_compatibility.html)）
+答: 4.X版本已经兼容了 Android P，默认支持HTTPS，如果要使用HTTP，需要自行配置（[点击查看配置方法](http://docs.developer.qq.com/xg/android_access/android_p_compatibility.html)）
 
+
+**问: 4.X版本日志中出现[TPush] channelId没有初始化**
+
+
+答: 信鸽SDK内部日志，不影响注册。
+
+**问: 4.X版本日志中出现Server response error code:404, error:{"ret":-1, "msg":"invalid appkey"}**
+
+
+答: 信鸽SDK内部嵌入了MTA SDK，该日志是MTA相关日志，不影响信鸽注册。
 
 
 **问: 集成小米通道，没有点击回调，怎么实现点击通知栏信息跳转到指定页面？**
