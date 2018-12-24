@@ -34,6 +34,28 @@
 ---
 ## 常见问题
 
+**问：iOS生产环境可以收到推送，打包后收不到了**
+```
+答：检查打包后是否缺少这个文件 archived-expanded-entitlements.xcent
+此时可能还会报错：
+
+No valid 'aps-environment' entitlement string found for application 'com.xxx.xxx': (null).
+
+解决方法：找到 TARGET -> Build Setting -> Code Signing Identity -> Code Signing Entitlements
+ 看看有没有 aps-environment 字段,没有的话可以加上。 
+<plist version="1.0">
+<dict>
+	<key>aps-environment</key>
+	<string>production</string>
+</dict>
+</plist>
+```
+
+
+
+
+
+
 **问: token 失效的原因？**
 ```
 答: 
