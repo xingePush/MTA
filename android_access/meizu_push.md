@@ -31,10 +31,14 @@
 
 
 ```js
-/* 魅族 3.2.8-release版
+/* 魅族 3.2.7-Release版
  * 注意：若魅族通道使用此版本,则信鸽sdk版本也需要同时使用v3.2.7-Release
  */
-compile 'com.tencent.xinge:xgmz:3.2.8-release'
+ compile 'com.tencent.xinge:xgmz:3.2.7-Release'
+/* 魅族 3.2.8-release版
+ * 注意：若魅族通道使用此版本,则信鸽sdk版本也需要同时使用v4.x
+ */
+ compile 'com.tencent.xinge:xgmz:3.2.8-release'
 ```
 
 ### Eclipse集成方式

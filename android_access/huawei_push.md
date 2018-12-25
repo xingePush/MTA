@@ -49,11 +49,16 @@
 2.导入华为推送相关依赖
 
 
-```
-/* 华为 3.2.8-Release版
+```js
+/* 华为 3.2.7-release版
  * 注意：若华为通道使用此版本,则信鸽sdk版本也需要同时使用v3.2.7-Release
  */
-compile 'com.tencent.xinge:xghw:3.2.8-Release'
+ compile 'com.tencent.xinge:xghw:3.2.7-release'
+
+/* 华为 3.2.8-Release
+ * 注意：若华为通道使用此版本,则信鸽sdk版本也需要同时使用v4.x
+ */
+ compile 'com.tencent.xinge:xghw:3.2.8-Release'
 ```
 
 
