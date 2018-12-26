@@ -482,10 +482,9 @@ XGPushConfig.enableDebug(this,true);
 
 **开启厂商通道初始化代码**
 
-在你的Application的attachBaseContext函数里面增加
+
+使用otherpush版本需要在你的Application的attachBaseContext函数里面增加
 ```java
-
-
  StubAppUtils.attachBaseContext(context);
  ```
 

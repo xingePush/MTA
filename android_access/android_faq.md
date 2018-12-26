@@ -224,6 +224,8 @@ String s = clickedResult.getContent();
 10-25 15:16:31.653 16551-16551/? D/XINGE: [CloudControlDownloadReceiver] onReceive
 10-25 15:16:31.673 16551-16738/? I/test: Download file SuccessXg-Xm-plug-1.0.2.pack to /data/user/0/com.qq.xgdemo1122/app_dex/XG/5/
 ```
+* 若始终无法下载dex配置包可采用非动态加载方式集成，需使用信鸽4.x不包含厂商通道版本jar，再集成各个厂商通道的jar，集成配置可参考文档。
+
 
 **\[小米通道排查路径\]**
 
