@@ -1,6 +1,31 @@
 # 最近更新
 
 ## Android SDK更新说明
+### Android SDK v4.0.4
+
+#### 更新时间
+
+* 2018-12-26
+
+#### 版本更新说明
+
+  1、增强信鸽通道稳定性
+  2、增强Android 7以上系统兼容性
+
+#### 升级提示
+
+* 建议升级！
+
+##### 下载地址：
+
+[Android SDK v4.0.4](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Push-SDK-Android-4.0.4.zip)
+
+
+
+
+
+
+## Android SDK更新说明
 ### Android SDK v4.2.0（Beta）
 
 #### 更新时间
