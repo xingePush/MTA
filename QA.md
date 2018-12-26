@@ -34,7 +34,7 @@
 ---
 ## 常见问题
 
-**问：iOS生产环境可以收到推送，打包后收不到了**
+**问：iOS开发环境可以收到推送，打包后收不到了**
 ```
 答：检查打包后是否缺少这个文件 archived-expanded-entitlements.xcent
 此时可能还会报错：
@@ -56,7 +56,7 @@ No valid 'aps-environment' entitlement string found for application 'com.xxx.xxx
 
 
 
-**问: token 失效的原因？**
+**问: iOS token 失效的原因？**
 ```
 答: 
 （1）系统注销或者是应用被卸载
@@ -95,6 +95,14 @@ No valid 'aps-environment' entitlement string found for application 'com.xxx.xxx
 
 
 答: 信鸽SDK内部嵌入了MTA SDK，该日志是MTA相关日志，不影响信鸽注册。
+
+**问: 注册厂商通道日志打印otherpushToken = null**
+
+
+答:1. 信鸽4.X版本集成厂商通道采用动态加载的方式，初次启动app会下载手机机型对应的厂商dex配置包，下载完成后杀死app进程，再次启动app即可完成注册。
+2.若始终无法下载dex配置包可采用非动态加载方式集成，需使用信鸽4.x不包含厂商通道版本jar，再集成各个厂商通道的jar，集成配置可参考文档。
+
+
 
 
 **问: 集成小米通道，没有点击回调，怎么实现点击通知栏信息跳转到指定页面？**
