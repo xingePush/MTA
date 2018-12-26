@@ -1,6 +1,6 @@
 # 最近更新
-
 ## Android SDK更新说明
+---
 ### Android SDK v4.0.4
 
 #### 更新时间
@@ -166,8 +166,32 @@
 
 [Android SDK v3.2.4（beta）](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Beta-SDK-Android-3.2.4.zip)
 
+---
+
 ## iOS SDK 更新说明
 
+
+---
+### iOS SDK v3.3.4（Beta）
+
+#### 更新时间
+
+* 2018-12-26
+
+#### 版本更新说明
+
+1. 支持富媒体推送，内容更丰富(v3.3.2 beta)
+2. 支持iOS 12，推送到达更稳定(v3.3.2 beta)
+3. 支持批量账号API，推送更灵活 (v3.3.2 beta)
+4. 修复内存泄露，提升稳定性 (v3.3.3 beta)
+
+#### 升级提示
+
+建议升级！
+
+##### 下载地址：
+
+[iOS SDK v3.3.4](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Beta-SDK-iOS-3.3.4.zip)
 
 
 ### iOS SDK v3.3.3（Beta）
