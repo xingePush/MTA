@@ -106,7 +106,7 @@ apply plugin: 'com.google.gms.google-services'
 
 ##启用FCM推送
 
-在项目设置里，云消息传递获取服务器密钥并提供给[信鸽技术支持](http://xg.qq.com/app/ctr_feedback/index)。
+
 在调用信鸽注册代码（XGPushManager.registerPush）前面添加以下代码设置
 
 ```java
