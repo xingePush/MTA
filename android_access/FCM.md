@@ -111,6 +111,7 @@ apply plugin: 'com.google.gms.google-services'
 
 ```java
 XGPushConfig.enableFcmPush(this,true);
+XGPushConfig.enableOtherPush(this, true);
 ```
 注册FCM成功的日志如下：
 
