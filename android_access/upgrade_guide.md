@@ -364,7 +364,6 @@ com.tencent.android.tpush.XGPushReceiver
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
-        <!-- 默认的自定义广播接收器，用于自定义处理魅族push消息广播，receiver的name为自定义的广播接收类 start -->
         <receiver android:name="com.tencent.android.mzpush.MZPushMessageReceiver" >
             <intent-filter>
 
