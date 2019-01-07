@@ -339,7 +339,7 @@ com.tencent.android.tpush.XGPushReceiver
 
 
         <receiver
-            android:name="com.tencent.otherpush.receiver.XmReceiver"
+            android:name="com.tencent.android.mipush.XMPushMessageReceiver"
             android:exported="true" >
             <intent-filter>
                 <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
@@ -365,7 +365,7 @@ com.tencent.android.tpush.XGPushReceiver
             </intent-filter>
         </receiver>
         <!-- 默认的自定义广播接收器，用于自定义处理魅族push消息广播，receiver的name为自定义的广播接收类 start -->
-        <receiver android:name="com.tencent.otherpush.receiver.MzReceiver" >
+        <receiver android:name="com.tencent.android.mzpush.MZPushMessageReceiver" >
             <intent-filter>
 
                 <!-- 接收push消息 -->
@@ -417,9 +417,7 @@ com.tencent.android.tpush.XGPushReceiver
                 <action android:name="com.huawei.intent.action.PUSH" />
             </intent-filter>
         </receiver>
-
-        <!-- xxx.xx.xx为CP自定义的广播名称，比如: com.huawei.hmssample. HuaweiPushRevicer -->
-        <receiver android:name="com.tencent.otherpush.receiver.HwReceiver" >
+        <receiver android:name="com.tencent.android.hwpush.HWPushMessageReceiver" >
             <intent-filter>
 
                 <!-- 必须,用于接收TOKEN -->
