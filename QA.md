@@ -329,7 +329,7 @@ No valid 'aps-environment' entitlement string found for application 'com.xxx.xxx
 **问：如果订单支付成功，但无法继续升级流程，请联系与您对接的商务或以下客服：**
 
 ```
-答：请致电：4009-100-100或微信添加小助手：4009-100-100 注明：付费疑问。
+答：请致电：4009-100-100或微信添加小助手：xg_push 注明：付费疑问。
 ```
 
 
