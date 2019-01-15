@@ -83,6 +83,8 @@ android:exported="true" >
 </receiver>
 ```
 - 4.X以上版本已经兼容了 Android P，默认支持HTTPS，如果要使用HTTP，需要自行配置（[点击查看配置方法](http://docs.developer.qq.com/xg/android_access/android_p_compatibility.html)）
+
+
 ## 手动配置来进行集成
 ### 注册并下载SDK
 
