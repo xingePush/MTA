@@ -5,7 +5,7 @@
   * [Android 推送服务介绍](android_access/xg_push_introduction.md)
   * [Android SDK 3.\* 集成指南](android_access/jcenter.md)
   * [Android SDK 4.\* 集成指南](android_access/upgrade_guide.md)
-  * [ 4.\*关于动态加载厂商通道的说明](android_access/android-sdk-4guan-yu-dong-tai-jia-zai-chang-shang-tong-dao-de-shuo-ming.md)
+  * [ 关于动态加载厂商通道的说明](v4_cloud_download.md)
   * [Android SDK API](android_access/android_api.md)
   * [华为推送通道集成指南](android_access/huawei_push.md)
   * [小米推送通道集成指南](android_access/mi_push.md)
