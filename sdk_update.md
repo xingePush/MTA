@@ -1,6 +1,57 @@
 # 最近更新
 ## Android SDK更新说明
 ---
+### Android SDK v4.0.5
+
+#### 更新时间
+
+* 2019-1-11
+
+#### 版本更新说明
+
+1. 增强信鸽通道稳定性
+2. 增强Android 7以上系统兼容性
+3. 修复偶发的crash问题
+
+#### 升级提示
+
+* 建议升级！
+
+##### 下载地址：
+
+[Android SDK v4.0.4](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Push-SDK-Android-4.0.5.zip)
+
+
+
+
+
+
+
+
+### Android SDK v4.3.0（Beta）
+
+#### 更新时间
+
+* 2019-1-14
+
+#### 版本更新说明
+
+1. 修复SDK长链接BUG，更稳定
+2. 适配小米魅族华为通道最新版本
+
+#### 升级提示
+
+* 建议升级！
+
+##### 下载地址：
+
+[Android SDK v4.3.0](https://xg.qq.com/pigeon_v2/resource/sdk/Xg-Beta-SDK-Android-4.3.0.zip)
+
+
+
+
+
+
 ### Android SDK v4.0.4
 
 #### 更新时间
@@ -25,7 +76,7 @@
 
 
 
-## Android SDK更新说明
+
 ### Android SDK v4.2.0（Beta）
 
 #### 更新时间
