@@ -29,18 +29,13 @@ classpath 'com.google.gms:google-services:3.1.0'
 在应用级的build.gradle文件中添加依赖
 ```xml
 
-compile 'com.tencent.xinge:fcm:3.2.7-beta'
+compile 'com.tencent.xinge:fcm:4.3.0-beta'
 
 
-compile 'com.google.firebase:firebase-messaging:12.0.1'
+compile 'com.google.firebase:firebase-messaging:17.3.1'
 
-注：云消息传递
 
-compile 'com.google.android.gms:play-services-base:12.0.1'
-
-注：Google配置google-play-services网（信鸽只用到了检测设备是否支持google service功能，要求版本大于12.0.1）：https://developers.google.com/android/guides/setup#add_google_play_services_to_your_project
-
- //并在应用级的gradle文件的最后一行代码中新增
+ //在应用级的gradle文件的最后一行代码中新增并将google-services.json放进你应用model的根路径下
 
 apply plugin: 'com.google.gms.google-services'
 

@@ -36,7 +36,7 @@
  */
  compile 'com.tencent.xinge:xgmz:3.2.7-Release'
 /* 魅族 3.2.8-release版
- * 注意：若魅族通道使用此版本,则信鸽sdk版本也需要同时使用v4.x
+ * 注意：若魅族通道使用此版本,则信鸽sdk版本也需要同时使用v4.0.5
  */
  compile 'com.tencent.xinge:xgmz:3.2.8-release'
 ```

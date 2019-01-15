@@ -34,7 +34,7 @@
  compile 'com.tencent.xinge:mipush:3.2.7-Release'
 
 /*小米3.2.8-release版
- * 注意：若小米通道使用此版本,则信鸽sdk版本也需要同时使用v4.x
+ * 注意：若小米通道使用此版本,则信鸽sdk版本也需要同时使用v4.0.5
  */
  compile 'com.tencent.xinge:mipush:3.2.8-release'
 ```
