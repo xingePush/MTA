@@ -9,52 +9,52 @@
 
 ```java
 
-ndk {
+    ndk {
                 //根据需要 自行选择添加的对应cpu类型的.so库。
                 abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
                 // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
             }
- manifestPlaceholders = [
+    manifestPlaceholders = [
                 XG_ACCESS_ID:"注册应用的accessid",
                 XG_ACCESS_KEY : "注册应用的accesskey",
               //如果需要华为通道，则加上华为的APPID 
                 HW_APPID: "华为的APPID"
                  ]
-//增加以下依赖
-implementation  'com.tencent.xinge:xinge:4.3.0-xgotherpush-beta'
-implementation 'com.tencent.wup:wup:1.0.0.E-release'
-implementation 'com.tencent.mid:mid:4.0.7-Release'
-//需要集成fcm增加以下依赖并将google-services.json放进你应用model的根路径下:
-implementation 'com.tencent.xinge:fcm:4.3.0-beta'
-implementation 'com.google.firebase:firebase-messaging:17.3.1'
-apply plugin: 'com.google.gms.google-services'
+    //增加以下依赖
+    implementation  'com.tencent.xinge:xinge:4.3.0-xgotherpush-beta'
+    implementation 'com.tencent.wup:wup:1.0.0.E-release'
+    implementation 'com.tencent.mid:mid:4.0.7-Release'
+    //需要集成fcm增加以下依赖并将google-services.json放进你应用model的根路径下:
+    implementation 'com.tencent.xinge:fcm:4.3.0-beta'
+    implementation 'com.google.firebase:firebase-messaging:17.3.1'
+    apply plugin: 'com.google.gms.google-services'
 
 
  ```
  2.代码上需要在你的```Application```的```attachBaseContext```函数里面增加
 ```java
- StubAppUtils.attachBaseContext(context);
+     StubAppUtils.attachBaseContext(context);
  ```
 
 
 初始化页面添加 
 ```java
-XGPushConfig.enableOtherPush(getApplicationContext(), true);
-XGPushConfig.setMiPushAppId(getApplicationContext(), "APPID");
-XGPushConfig.setMiPushAppKey(getApplicationContext(), "APPKEY");
-XGPushConfig.setMzPushAppId(this, "APPID");
-XGPushConfig.setMzPushAppKey(this, "APPKEY");
-XGPushManager.registerPush(this, new XGIOperateCallback() {
-@Override
-public void onSuccess(Object data, int flag) {
-//token在设备卸载重装的时候有可能会变
-Log.d("TPush", "注册成功，设备token为：" + data);
-}
-@Override
-public void onFail(Object data, int errCode, String msg) {
-Log.d("TPush", "注册失败，错误码：" + errCode + ",错误信息：" + msg);
-}
-})
+    XGPushConfig.enableOtherPush(getApplicationContext(), true);
+    XGPushConfig.setMiPushAppId(getApplicationContext(), "APPID");
+    XGPushConfig.setMiPushAppKey(getApplicationContext(), "APPKEY");
+    XGPushConfig.setMzPushAppId(this, "APPID");
+    XGPushConfig.setMzPushAppKey(this, "APPKEY");
+    XGPushManager.registerPush(this, new XGIOperateCallback() {
+    @Override
+    public void onSuccess(Object data, int flag) {
+    //token在设备卸载重装的时候有可能会变
+    Log.d("TPush", "注册成功，设备token为：" + data);
+    }
+    @Override
+    public void onFail(Object data, int errCode, String msg) {
+    Log.d("TPush", "注册失败，错误码：" + errCode + ",错误信息：" + msg);
+    }
+    })
 ```
 
 
@@ -63,48 +63,48 @@ Log.d("TPush", "注册失败，错误码：" + errCode + ",错误信息：" + ms
 ###（AS集成）不使用动态加载厂商通道方式：
 1.在你app模块的```build.gradle ```文件里添加
 ```java
-ndk {
+    ndk {
                 //根据需要 自行选择添加的对应cpu类型的.so库。
                 abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
                 // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
             }
- manifestPlaceholders = [
+     manifestPlaceholders = [
                 XG_ACCESS_ID:"注册应用的accessid",
                 XG_ACCESS_KEY : "注册应用的accesskey",
               //如果需要华为通道，则加上华为的APPID 
                 HW_APPID: "华为的APPID"
                  ]
-//增加以下依赖
+    //增加以下依赖
 
-implementation 'com.tencent.xinge:xinge:4.3.0-beta'
-implementation 'com.tencent.wup:wup:1.0.0.E-release'
-implementation 'com.tencent.mid:mid:4.0.7-Release'
-implementation 'com.tencent.xinge:mipush:4.3.0-xiaomi-beta'
-implementation 'com.tencent.xinge:xgmz:4.3.0-meizu-beta''
-implementation 'com.tencent.xinge:xghw:4.3.0-huawei-beta'
-//fcm通道需要增加以下依赖并将google-services.json放进你应用model的根路径下。
-implementation 'com.tencent.xinge:fcm:4.3.0-beta'
-implementation 'com.google.firebase:firebase-messaging:17.3.1'
-apply plugin: 'com.google.gms.google-services'
+    implementation 'com.tencent.xinge:xinge:4.3.0-beta'
+    implementation 'com.tencent.wup:wup:1.0.0.E-release'
+    implementation 'com.tencent.mid:mid:4.0.7-Release'
+    implementation 'com.tencent.xinge:mipush:4.3.0-xiaomi-beta'
+    implementation 'com.tencent.xinge:xgmz:4.3.0-meizu-beta''
+    implementation 'com.tencent.xinge:xghw:4.3.0-huawei-beta'
+    //fcm通道需要增加以下依赖并将google-services.json放进你应用model的根路径下。
+    implementation 'com.tencent.xinge:fcm:4.3.0-beta'
+    implementation 'com.google.firebase:firebase-messaging:17.3.1'
+    apply plugin: 'com.google.gms.google-services'
 
 ```
 2.初始化页面添加 
 ```java
-XGPushConfig.enableOtherPush(getApplicationContext(), true);
-XGPushConfig.setMiPushAppId(getApplicationContext(), "APPID");
-XGPushConfig.setMiPushAppKey(getApplicationContext(), "APPKEY");
-XGPushConfig.setMzPushAppId(this, "APPID");
-XGPushConfig.setMzPushAppKey(this, "APPKEY");
-XGPushManager.registerPush(this, new XGIOperateCallback() {
-@Override
-public void onSuccess(Object data, int flag) {
-//token在设备卸载重装的时候有可能会变
-Log.d("TPush", "注册成功，设备token为：" + data);
+    XGPushConfig.enableOtherPush(getApplicationContext(), true);
+    XGPushConfig.setMiPushAppId(getApplicationContext(), "APPID");
+    XGPushConfig.setMiPushAppKey(getApplicationContext(), "APPKEY");
+    XGPushConfig.setMzPushAppId(this, "APPID");
+    XGPushConfig.setMzPushAppKey(this, "APPKEY");
+    XGPushManager.registerPush(this, new XGIOperateCallback() {
+    @Override
+    public void onSuccess(Object data, int flag) {
+    //token在设备卸载重装的时候有可能会变
+    Log.d("TPush", "注册成功，设备token为：" + data);
 }
-@Override
-public void onFail(Object data, int errCode, String msg) {
-Log.d("TPush", "注册失败，错误码：" + errCode + ",错误信息：" + msg);
-}
+    @Override
+    public void onFail(Object data, int errCode, String msg) {
+    Log.d("TPush", "注册失败，错误码：" + errCode + ",错误信息：" + msg);
+    }
 })
 ```
 ###注意事项
