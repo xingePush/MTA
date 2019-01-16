@@ -80,7 +80,7 @@
     implementation 'com.tencent.wup:wup:1.0.0.E-release'
     implementation 'com.tencent.mid:mid:4.0.7-Release'
     implementation 'com.tencent.xinge:mipush:4.3.0-xiaomi-beta'
-    implementation 'com.tencent.xinge:xgmz:4.3.0-meizu-beta''
+    implementation 'com.tencent.xinge:xgmz:4.3.0-meizu-beta'
     implementation 'com.tencent.xinge:xghw:4.3.0-huawei-beta'
     //fcm通道需要增加以下依赖并将google-services.json放进你应用model的根路径下。
     implementation 'com.tencent.xinge:fcm:4.3.0-beta'
