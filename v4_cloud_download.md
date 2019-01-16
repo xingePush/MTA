@@ -100,16 +100,16 @@
     public void onSuccess(Object data, int flag) {
     //token在设备卸载重装的时候有可能会变
     Log.d("TPush", "注册成功，设备token为：" + data);
-}
+    }
     @Override
     public void onFail(Object data, int errCode, String msg) {
     Log.d("TPush", "注册失败，错误码：" + errCode + ",错误信息：" + msg);
     }
-})
+    })
 ```
 ###注意事项
 1. 动态下载插件目前只支持华为，小米，魅族通道。
-2. 能否成功加载厂商通道的dex配置包依赖于终端网络环境，在终端日志中过滤download可观察到是否下载成功。
+2. 能否成功加载厂商通道的dex配置包依赖于终端网络环境和设备厂商系统的限制，如多次注册失败请使用<a href="#（AS集成）不使用动态加载厂商通道方式">（AS集成）不使用动态加载厂商通道方式</a>。
 3. 使用AS动态加载方式无需手动集成XG4HWPush.jar，XG4MZPush.jar，小米XG4XMPush.jar等对应通道的jar或者是gradle对应依赖。
 4. 如果Eclipse集成需使用动态加载方式，则需要增加XgOtherPush.jar包，否则不要增加此包。(注意：XgOtherPush.jar和手动导入的XG4XMPush.jar，XG4MZPush，XG4HWPush的jar或者是小米，华为，魅族的gradle对应依赖是互斥的。)
 5. Eclipse使用动态加载需增加XgOtherPush.jar，manifest必须要配上云控配置：
