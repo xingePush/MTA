@@ -3,8 +3,9 @@
 fcm通道是信鸽和谷歌推出的各种推送通道，在外国可用谷歌service框架的手机上能够实现不打开应用收到推送消息。在没有fcm的手机rom下依旧走信鸽的推送通道。
 
 ##获取FCM推送秘钥
-1.[FireBase官网](https://firebase.google.com/?hl=zh-cn)注册应用信息。并将获取到的FCM应用推送服务器密钥和 SenderID，配置到信鸽的管理台。目前国内厂商通道和海外fcm通道不能同时开启，如需要同时打开需联系[技术支持](http://xg.qq.com/app/ctr_feedback/index）)开启。
-2.下载google-services.json 文件。如图所示：
+1. [FireBase官网](https://firebase.google.com/?hl=zh-cn)注册应用信息。并将获取到的FCM应用推送服务器密钥和 SenderID，配置到信鸽的管理台。
+2. 下载google-services.json 文件。
+如图所示：
 
 获取json文件：
 ![](/assets/获取fcmjson.jpeg)
