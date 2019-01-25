@@ -79,11 +79,11 @@
     implementation 'com.tencent.xinge:xinge:4.3.1-beta'
     implementation 'com.tencent.wup:wup:1.0.0.E-release'
     implementation 'com.tencent.mid:mid:4.0.7-Release'
-    implementation 'com.tencent.xinge:mipush:4.3.0-xiaomi-beta'
-    implementation 'com.tencent.xinge:xgmz:4.3.0-meizu-beta'
+    implementation 'com.tencent.xinge:mipush:4.3.1-xiaomi-beta'
+    implementation 'com.tencent.xinge:xgmz:4.3.1-meizu-beta'
     implementation 'com.tencent.xinge:xghw:4.3.1-huawei-beta'
     //fcm通道需要增加以下依赖并将google-services.json放进你应用model的根路径下。
-    implementation 'com.tencent.xinge:fcm:4.3.0-beta'
+    implementation 'com.tencent.xinge:fcm:4.3.1-beta'
     implementation 'com.google.firebase:firebase-messaging:17.3.1'
     apply plugin: 'com.google.gms.google-services'
 
