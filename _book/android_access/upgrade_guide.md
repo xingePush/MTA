@@ -42,16 +42,18 @@ AndroidStudio 上可以使用 jcenter 远程仓库自动接入，不需要在项
     dependencies {
         ......   
     
-    //信鸽jar，不包含厂商通道
-    //compile 'com.tencent.xinge:xinge:4.0.3-Beta'
-    //信鸽jar，包含厂商通道
-    compile 'com.tencent.xinge:xinge:4.0.3-otherpush-Beta'
+    //信鸽普通版本jar，不包含厂商通道
+    compile  'com.tencent.xinge:xinge:4.0.5-release'
+    //compile'com.tencent.xinge:xinge:4.3.0-beta'
+    //信鸽及动态加载厂商通道jar(此版本已经集成厂商通道，无需依赖其它三个厂商依赖)
+   
+    //compile 'com.tencent.xinge:xinge:4.3.0-xgotherpush-beta'
     //jg包
     compile'com.tencent.jg:jg:1.1'
     //wup包
     compile 'com.tencent.wup:wup:1.0.0.E-release'
-    //mid包
-    compile 'com.tencent.mid:mid:4.0.7'
+    //mid包，minSdkVersion 14
+    compile 'com.tencent.mid:mid:4.0.7-Release'
         
     }
 ```
@@ -80,6 +82,9 @@ android:exported="true" >
 </intent-filter>
 </receiver>
 ```
+- 4.X以上版本已经兼容了 Android P，默认支持HTTPS，如果要使用HTTP，需要自行配置（[点击查看配置方法](http://docs.developer.qq.com/xg/android_access/android_p_compatibility.html)）
+
+
 ## 手动配置来进行集成
 ### 注册并下载SDK
 
@@ -193,10 +198,10 @@ android:name="com.tencent.android.tpush.SettingsContentProvider"
 android:authorities="当前应用的包名.TPUSH_PROVIDER"
 android:exported="false" />
 
-<!-- 【必须】 【注意】authorities修改为 包名.TENCENT.MID.V4, 如demo的包名为：com.qq.xgdemo-->
+<!-- 【必须】 【注意】authorities修改为 包名.TENCENT.MID.V3, 如demo的包名为：com.qq.xgdemo-->
 <provider
 android:name="com.tencent.mid.api.MidProvider"
-android:authorities="当前应用的包名.TENCENT.MID.V4"
+android:authorities="当前应用的包名.TENCENT.MID.V3"
 android:exported="true" >
 </provider>
 
@@ -246,8 +251,6 @@ android:value="YOUR_ACCESS_KEY" />
 ```
 com.tencent.android.tpush.service.XGPushServiceV4
 com.tencent.android.tpush.XGPushReceiver
-com.tencent.android.tpush.service.XGDaemonService
-com.tencent.mid.api.MidProvider
 ```
 
 
@@ -290,16 +293,6 @@ com.tencent.mid.api.MidProvider
             </intent-filter>
         </receiver>
         
-        <service
-            android:name="com.tencent.android.tpush.service.XGDaemonService"
-            android:process=":xg_service_v4" />
-        <!-- 【必须】 【注意】authorities修改为 包名.TENCENT.MID.V4, 如demo的包名为：com.qq.xgdemo-->
-        <provider
-           android:name="com.tencent.mid.api.MidProvider"
-           android:authorities="com.qq.xgdemo.TENCENT.MID.V4"
-           android:exported="true" >
-       </provider>
-       
         ```
          
 
@@ -348,7 +341,7 @@ com.tencent.mid.api.MidProvider
 
 
         <receiver
-            android:name="com.tencent.otherpush.receiver.XmReceiver"
+            android:name="com.tencent.android.mipush.XMPushMessageReceiver"
             android:exported="true" >
             <intent-filter>
                 <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
@@ -373,8 +366,7 @@ com.tencent.mid.api.MidProvider
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
-        <!-- 默认的自定义广播接收器，用于自定义处理魅族push消息广播，receiver的name为自定义的广播接收类 start -->
-        <receiver android:name="com.tencent.otherpush.receiver.MzReceiver" >
+        <receiver android:name="com.tencent.android.mzpush.MZPushMessageReceiver" >
             <intent-filter>
 
                 <!-- 接收push消息 -->
@@ -426,9 +418,7 @@ com.tencent.mid.api.MidProvider
                 <action android:name="com.huawei.intent.action.PUSH" />
             </intent-filter>
         </receiver>
-
-        <!-- xxx.xx.xx为CP自定义的广播名称，比如: com.huawei.hmssample. HuaweiPushRevicer -->
-        <receiver android:name="com.tencent.otherpush.receiver.HwReceiver" >
+        <receiver android:name="com.tencent.android.hwpush.HWPushMessageReceiver" >
             <intent-filter>
 
                 <!-- 必须,用于接收TOKEN -->
@@ -491,10 +481,9 @@ XGPushConfig.enableDebug(this,true);
 
 **开启厂商通道初始化代码**
 
-在你的Application的attachBaseContext函数里面增加
+
+使用otherpush版本需要在你的Application的attachBaseContext函数里面增加
 ```java
-
-
  StubAppUtils.attachBaseContext(context);
  ```
 
@@ -531,7 +520,26 @@ Log.d("TPush", "注册失败，错误码：" + errCode + ",错误信息：" + ms
 10-09 20:08:46.922 24290-24303/com.qq.xgdemo I/XINGE: [TPush] get RegisterEntity:RegisterEntity [accessId=2100250470, accessKey=null, token=5874b7465d9eead746bd9374559e010b0d1c0bc4, packageName=com.qq.xgdemo, state=0, timestamp=1507550766, xgSDKVersion=3.11, appVersion=1.0]
 10-09 20:08:47.232 24290-24360/com.qq.xgdemo D/TPush: 注册成功，设备token为：5874b7465d9eead746bd9374559e010b0d1c0bc4
 ```
+**厂商通道token注册**
 
+1.开启厂商通道初始化，等待云控下载对应设备的厂商dex包 。
+以小米为例，下载成功的日志如下：
+```xml
+10-25 15:16:31.067 16551-16551/? D/XINGE: [DownloadService] onCreate()
+10-25 15:16:31.073 16551-16757/? D/XINGE: [DownloadService] action:onHandleIntent
+10-25 15:16:31.083 16551-16757/? V/XINGE: [CloudCtrDownload] Create downloadControl
+10-25 15:16:31.089 16551-16757/? I/XINGE: [CloudCtrDownload] action:download - url:https://pingjs.qq.com/xg/Xg-Xm-plug-1.0.2.pack, saveFilePath:/data/user/0/com.qq.xgdemo1122/app_dex/XG/5/, fileName:Xg-Xm-plug-1.0.2.pack
+10-25 15:16:31.097 16551-16757/? V/XINGE: [CloudCtrDownload] Download file: Xg-Xm-plug-1.0.2.pack
+10-25 15:16:31.641 16551-16757/? D/XINGE: [DownloadService] download file Succeed
+10-25 15:16:31.650 16551-16757/? D/XINGE: [CloudCtrDownload] Download succeed.
+10-25 15:16:31.653 16551-16551/? D/XINGE: [CloudControlDownloadReceiver] onReceive
+10-25 15:16:31.673 16551-16738/? I/test: Download file SuccessXg-Xm-plug-1.0.2.pack to /data/user/0/com.qq.xgdemo1122/app_dex/XG/5/
+```
+2.观察到下载完成的日志后杀死应用进程，再次启动应用即可完成注册：
+```xml
+10-25 15:34:26.423 18700-18700/? D/TPush: +++ register push sucess. token:22dc455f79d36dec1065418e1d284639bac776b4
+10-25 15:34:26.432 18700-18731/? I/XINGE: [XGOtherPush] other push token is : lYDvOWispXGoVADhRyiVdw3krLIolEd21JqdmjqBqDISK+gwl/PBm3tA9U43jxfH other push type: xiaomi
+```
 **设置账号**
 
 ```java
@@ -573,7 +581,6 @@ XGPushManager.setTag(this,"XINGE");
 
 ##代码混淆
 
-<hr>
 
 如果您的项目中使用proguard等工具做了代码混淆，请保留以下选项，否则将导致信鸽服务不可用。
 
@@ -583,6 +590,7 @@ XGPushManager.setTag(this,"XINGE");
 -keep class com.tencent.android.tpush.** {* ;}
 -keep class com.tencent.mid.** {* ;}
 -keep class com.qq.taf.jce.** {*;}
+-keep class com.tencent.bigdata.** {* ;}
 
 华为通道
 -ignorewarning
@@ -608,4 +616,3 @@ XGPushManager.setTag(this,"XINGE");
 
 
 
- ```

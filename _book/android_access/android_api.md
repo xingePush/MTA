@@ -25,8 +25,8 @@
 |```void registerPush(``` <br> ```Context context,``` <br> ``` String account, ``` <br> ```XGIOperateCallback callback``` <br> ```)``` |启动并注册APP，同时绑定账号,<br>推荐有帐号体系的APP使用<br>（3.2.2不包括3.2.2之前的版本使用，有注册回调）|
 |```void bindAccount(``` <br> ```Context context, ``` <br> ```String account, ``` <br> ```XGIOperateCallback callback``` <br> ```)``` |启动并注册APP，同时绑定账号,<br>推荐有帐号体系的APP使用<br>（3.2.2以及3.2.2之后的版本使用，<br>此接口会覆盖设备之前绑定过的账号，仅当前注册的账号生效）|
 |```void bindAccount(``` <br> ```Context context,``` <br> ``` final String account``` <br> ```)``` |启动并注册APP，同时绑定账号,<br>推荐有帐号体系的APP使用<br>（3.2.2以及3.2.2之后的版本使用，此接口会覆盖设备之前绑定过的账号，<br>仅当前注册的账号生效，无注册回调）|
-| ```void appendAccount(``` <br> ```Context context,``` <br> ``` String account, ``` <br> ```XGIOperateCallback callback``` <br> ```)``` |启动并注册APP，同时绑定账号,<br>推荐有帐号体系的APP使用<br>（3.2.2以及3.2.2之后的版本使用，此接口保留之前的账号，只做增加操作，<br>一个token下最多只能有3个账号超过限制会自动顶掉之前绑定的账号，有注册回调）|
-| ```void appendAccount(``` <br> ```Context context,``` <br> ``` final String account``` <br> ```)``` |启动并注册APP，同时绑定账号,<br>推荐有帐号体系的APP使用<br>（3.2.2以及3.2.2之后的版本使用，<br>此接口保留之前的账号，只做增加操作，<br>一个token下最多只能有3个账号超过限制会自动顶掉之前绑定的账号，无注册回调）|
+| ```void appendAccount(``` <br> ```Context context,``` <br> ``` String account, ``` <br> ```XGIOperateCallback callback``` <br> ```)``` |启动并注册APP，同时绑定账号,<br>推荐有帐号体系的APP使用<br>（3.2.2以及3.2.2之后的版本使用，此接口保留之前的账号，只做增加操作，<br>一个token下最多只能有10个账号超过限制会自动顶掉之前绑定的账号，有注册回调）|
+| ```void appendAccount(``` <br> ```Context context,``` <br> ``` final String account``` <br> ```)``` |启动并注册APP，同时绑定账号,<br>推荐有帐号体系的APP使用<br>（3.2.2以及3.2.2之后的版本使用，<br>此接口保留之前的账号，只做增加操作，<br>一个token下最多只能有10个账号超过限制会自动顶掉之前绑定的账号，无注册回调）|
 | ```void delAccount(``` <br> ```Context context,``` <br> ``` final String account, ``` <br> ```XGIOperateCallback callback``` <br> ```)```  |解绑指定账号（3.2.2以及3.2.2之后的版本使用，有注册回调）|
 | ```void delAccount(``` <br> ```Context context,``` <br> ``` final String account``` <br> ```)``` |解绑指定账号（3.2.2以及3.2.2之后的版本使用，无注册回调）|
 |```void registerPush(``` <br> ```Context context,``` <br> ```String account, ``` <br> ```String ticket, ``` <br> ```int ticketType,``` <br> ``` String qua, ``` <br> ```final XGIOperateCallback callback``` <br> ```)```|同上，仅供带登陆态的业务使用|
@@ -197,7 +197,10 @@ account：绑定的账号，绑定后可以针对账号发送推送消息。
 
 callback：callback调用，主要包括操作成功和失败的回调，不能为null
 
-注：在信鸽3.2.2beta版本以后账号绑定需要调用全新的接口
+注意：
+一个token下最多可以有10个帐号，同时一个帐号下最多可有100个token。
+
+在信鸽3.2.2beta版本以后账号绑定需要调用全新的接口
 
 ```java
 
@@ -210,10 +213,10 @@ void bindAccount(Context context, String account, XGIOperateCallback callback)
 启动并注册APP，同时绑定账号,推荐有帐号体系的APP使用（3.2.2以及3.2.2之后的版本使用，此接口会覆盖设备之前绑定过的账号，仅当前注册的账号生效，无注册回调）	
 void bindAccount(Context context, final String account)
 
-启动并注册APP，同时绑定账号,推荐有帐号体系的APP使用（3.2.2以及3.2.2之后的版本使用，此接口保留之前的账号，只做增加操作，一个token下最多只能有3个账号超过限制会自动顶掉之前绑定的账号，有注册回调）
+启动并注册APP，同时绑定账号,推荐有帐号体系的APP使用（3.2.2以及3.2.2之后的版本使用，此接口保留之前的账号，只做增加操作，一个token下最多只能有10个账号超过限制会自动顶掉之前绑定的账号，有注册回调）
 void appendAccount(Context context, String account, XGIOperateCallback callback)
 
-启动并注册APP，同时绑定账号,推荐有帐号体系的APP使用（3.2.2以及3.2.2之后的版本使用，此接口保留之前的账号，只做增加操作，一个token下最多只能有3个账号超过限制会自动顶掉之前绑定的账号，无注册回调）
+启动并注册APP，同时绑定账号,推荐有帐号体系的APP使用（3.2.2以及3.2.2之后的版本使用，此接口保留之前的账号，只做增加操作，一个token下最多只能有10个账号超过限制会自动顶掉之前绑定的账号，无注册回调）
 void appendAccount(Context context, final String account)	
 ```
 
@@ -502,7 +505,7 @@ message：接收到消息结构体，其中XGPushTextMessage的方法列表如�
 
 |方法名|返回值|默认值|描述|
 |----|--------|-----|---|
-|etContent()|String|""|消息正文内容，通常只需要下发本字段即可|
+|getContent()|String|""|消息正文内容，通常只需要下发本字段即可|
 |getCustomContent()|String|""|消息自定义key-value|
 |getTitle()|String|""|消息标题（注意：从前台下发应用内消息字中的描述不属于标题|
 
@@ -582,55 +585,6 @@ message：接收到消息结构体，其中XGPushTextMessage的方法列表如�
         XGPushManager.addLocalNotification(context,local_msg);
         ```
         
-##自定义通知样式
-用户可以根据自行需要设置通知样式，但由于目前定制ROM的限制，部分接口无法适配全部机型。
-
- ```java
-  XGCustomPushNotificationBuilder build = new  XGCustomPushNotificationBuilder();
-  
-		build.setSound(
-				RingtoneManager.getActualDefaultRingtoneUri(
-				
-						getApplicationContext(), RingtoneManager.TYPE_ALARM))
-				
-				.setDefaults(Notification.DEFAULT_VIBRATE) // 振动
-				
-				.setFlags(Notification.FLAG_NO_CLEAR); // 是否可清除
-				
-		// 设置自定义通知layout,通知背景等可以在layout里设置
-		
-		build.setLayoutId(R.layout.notification);
-		
-		// 设置自定义通知内容id
-		
-		build.setLayoutTextId(R.id.content);
-		
-		// 设置自定义通知标题id
-		
-		build.setLayoutTitleId(R.id.title);
-		 
-		
-		// 设置自定义通知图片资源
-		
-		build.setLayoutIconDrawableId(R.drawable.logo);
-		
-		// 设置状态栏的通知小图标
-		
-		build.setIcon(R.drawable.right);
-		
-		// 设置时间id
-		
-		build.setLayoutTimeId(R.id.time);
-		
-		// 若不设定以上自定义layout，又想简单指定通知栏图片资源
-		
-		build.setNotificationLargeIcon(R.drawable.ic_action_search);
-		
-		// 客户端保存build_id
-		
-		XGPushManager.setPushNotificationBuilder(this, build_id, build);
-		
-		```
 
 ## 获取设备Token
 

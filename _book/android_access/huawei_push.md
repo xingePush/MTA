@@ -1,6 +1,6 @@
 # 华为推送通道集成指南
 
-华为推送通道是由**华为官方提供**的系统级推送通道。在华为手机上，推送消息能够通过华为的系统通道抵达终端，并且无需打开应用就能够收到推送。使用此功能必须先集成信鸽3.2.1-beta以上版本。
+华为推送通道是由**华为官方提供**的系统级推送通道。在华为手机上，推送消息能够通过华为的系统通道抵达终端，并且无需打开应用就能够收到推送。
 
 **注意事项：**
 
@@ -47,21 +47,20 @@
 ```
 
 2.导入华为推送相关依赖
-以下两个版本请根据需要选择其中之一
 
-```java
-//在集成信鸽的基础上新增华为push的jar包
-compile 'com.tencent.xinge:xghw:3.2.4-beta'
-```
-```
-/* 华为 3.2.5-release版
- * 注意：若华为通道使用此版本,则信鸽sdk版本也需要同时使用v3.2.5
+
+```js
+/* 华为 3.2.7-release版
+ * 注意：若华为通道使用此版本,则信鸽sdk版本也需要同时使用v3.2.7-Release
  */
-compile 'com.tencent.xinge:xghw:3.2.5-release'
+ compile 'com.tencent.xinge:xghw:3.2.7-release'
+
+/* 华为 3.2.8-Release
+ * 注意：若华为通道使用此版本,则信鸽sdk版本也需要同时使用v4.0.5
+ */
+ compile 'com.tencent.xinge:xghw:3.2.8-Release'
 ```
 
-3.配置 <a href="#华为消息receiver">华为消息receiver</a>.
-**注：** 如果使用```xghw:3.2.4-beta```版本则不需要此步骤，只需要前两步即可
 
 
 
@@ -107,7 +106,7 @@ compile 'com.tencent.xinge:xghw:3.2.5-release'
 <!-- 注：华为push 需要的 end -->
 
 ```
-3.2.配置 <a href="#华为消息receiver">华为消息receiver</a>.
+3.配置 <a href="#华为消息receiver">华为消息receiver</a>.
 
 #### 华为消息receiver
 
@@ -190,11 +189,11 @@ public class MyReceiver extends PushReceiver {
 }
 
 ```
-2. 在 ```AndroidManifest.xml``` 增加自定义 ```Receiver``` 配置如下：
+2 . 在 ```AndroidManifest.xml``` 增加自定义 ```Receiver``` 配置如下：
 
 ```xml
 <!-- xxx.xx.xx为CP自定义的广播名称，比如: com.huawei.hmssample. HuaweiPushRevicer -->
-        <receiver android:name=".MyReceiver" >
+        <receiver android:name="com.tencent.android.hwpush.HWPushMessageReceiver" >
             <intent-filter>
 
                 <!-- 必须,用于接收TOKEN -->

@@ -1,0 +1,862 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>关于4.*信鸽及动态加载厂商通道集成说明 · 腾讯移动推送 文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="android_access/android_api.html" />
+    
+    
+    <link rel="prev" href="android_access/upgrade_guide.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://xg.qq.com/" target="_blank" class="custom-link">腾讯移动推送</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    信鸽推送基础介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="android_access.html">
+            
+                <a href="android_access.html">
+            
+                    
+                    Android接入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="android_access/xg_push_introduction.html">
+            
+                <a href="android_access/xg_push_introduction.html">
+            
+                    
+                    Android 推送服务介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="android_access/jcenter.html">
+            
+                <a href="android_access/jcenter.html">
+            
+                    
+                    Android SDK 3.* 集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="android_access/upgrade_guide.html">
+            
+                <a href="android_access/upgrade_guide.html">
+            
+                    
+                    Android SDK 4.* 集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="v4_cloud_download.html">
+            
+                <a href="v4_cloud_download.html">
+            
+                    
+                    关于4.*信鸽及动态加载厂商通道集成说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="android_access/android_api.html">
+            
+                <a href="android_access/android_api.html">
+            
+                    
+                    Android SDK API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="android_access/huawei_push.html">
+            
+                <a href="android_access/huawei_push.html">
+            
+                    
+                    华为推送通道集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="android_access/mi_push.html">
+            
+                <a href="android_access/mi_push.html">
+            
+                    
+                    小米推送通道集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="android_access/meizu_push.html">
+            
+                <a href="android_access/meizu_push.html">
+            
+                    
+                    魅族推送通道集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="android_access/FCM.html">
+            
+                <a href="android_access/FCM.html">
+            
+                    
+                    FCM通道集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="android_access/android_faq.html">
+            
+                <a href="android_access/android_faq.html">
+            
+                    
+                    Android SDK 常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="android_access/xg_demo.html">
+            
+                <a href="android_access/xg_demo.html">
+            
+                    
+                    Android SDK Demo使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="android_access/android_returncode.html">
+            
+                <a href="android_access/android_returncode.html">
+            
+                    
+                    Android SDK 错误码对照表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="android_access/android_p_compatibility.html">
+            
+                <a href="android_access/android_p_compatibility.html">
+            
+                    
+                    Android P 兼容方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ios_access.html">
+            
+                <a href="ios_access.html">
+            
+                    
+                    iOS接入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="ios_access/ios_push_introduction.html">
+            
+                <a href="ios_access/ios_push_introduction.html">
+            
+                    
+                    iOS 推送服务介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="ios_access/ios_access_guide.html">
+            
+                <a href="ios_access/ios_access_guide.html">
+            
+                    
+                    iOS SDK 集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="ios_access/ios_api.html">
+            
+                <a href="ios_access/ios_api.html">
+            
+                    
+                    iOS SDK API 接口文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="ios_access/ios_push_certificate.html">
+            
+                <a href="ios_access/ios_push_certificate.html">
+            
+                    
+                    iOS 推送证书说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="ios_access/ios_xg_idfa.html">
+            
+                <a href="ios_access/ios_xg_idfa.html">
+            
+                    
+                    iOS关于 IDFA 插件说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="ios_access/ios_extension_api.html">
+            
+                <a href="ios_access/ios_extension_api.html">
+            
+                    
+                    iOS 关于通知服务扩展的使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="ios_access/ios_returncode.html">
+            
+                <a href="ios_access/ios_returncode.html">
+            
+                    
+                    iOS SDK 错误码对照表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="ios_access/ios_faq.html">
+            
+                <a href="ios_access/ios_faq.html">
+            
+                    
+                    iOS SDK 常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="ios_access/api_2.5.0.html">
+            
+                <a href="ios_access/api_2.5.0.html">
+            
+                    
+                    iOS SDK v2.5.0 完整接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="server_api.html">
+            
+                <a href="server_api.html">
+            
+                    
+                    服务端API接入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="server_api/other.html">
+            
+                <a href="server_api/other.html">
+            
+                    
+                    服务端其他语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="manage.html">
+            
+                <a href="manage.html">
+            
+                    
+                    信鸽推送管理台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="console/auth.html">
+            
+                <a href="console/auth.html">
+            
+                    
+                    管理台权限说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="console/pushdetail.html">
+            
+                <a href="console/pushdetail.html">
+            
+                    
+                    管理台数据展示说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="server_api/v3.html">
+            
+                <a href="server_api/v3.html">
+            
+                    
+                    REST API V3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="server_api/v3/rest_api_summary.html">
+            
+                <a href="server_api/v3/rest_api_summary.html">
+            
+                    
+                    REST API 概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="server_api/v3/tag_api_v3.html">
+            
+                <a href="server_api/v3/tag_api_v3.html">
+            
+                    
+                    Tag API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="server_api/v3/push_api_v3.html">
+            
+                <a href="server_api/v3/push_api_v3.html">
+            
+                    
+                    Push API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="sdk_update.html">
+            
+                <a href="sdk_update.html">
+            
+                    
+                    最近更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="noun_explanation.html">
+            
+                <a href="noun_explanation.html">
+            
+                    
+                    名词解释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="QA.html">
+            
+                <a href="QA.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >关于4.*信鸽及动态加载厂商通道集成说明</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x5173;&#x4E8E;4&#x4FE1;&#x9E3D;&#x53CA;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x96C6;&#x6210;&#x8BF4;&#x660E;">1. &#x5173;&#x4E8E;4.*&#x4FE1;&#x9E3D;&#x53CA;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x96C6;&#x6210;&#x8BF4;&#x660E;</a></li><ul><li><a href="#&#xFF08;as&#x96C6;&#x6210;&#xFF09;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;&#xFF1A;">1.1. &#xFF08;AS&#x96C6;&#x6210;&#xFF09;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;&#xFF1A;</a></li><ul><li><a href="#&#xFF08;as&#x96C6;&#x6210;&#xFF09;&#x4E0D;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;&#xFF1A;">1.1.1. &#xFF08;AS&#x96C6;&#x6210;&#xFF09;&#x4E0D;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;&#xFF1A;</a></li><li><a href="#&#x6CE8;&#x610F;&#x4E8B;&#x9879;">1.1.2. &#x6CE8;&#x610F;&#x4E8B;&#x9879;</a></li></ul></ul></ul></div><a href="#&#x5173;&#x4E8E;4&#x4FE1;&#x9E3D;&#x53CA;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x96C6;&#x6210;&#x8BF4;&#x660E;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5173;&#x4E8E;4&#x4FE1;&#x9E3D;&#x53CA;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x96C6;&#x6210;&#x8BF4;&#x660E;"><a name="&#x5173;&#x4E8E;4&#x4FE1;&#x9E3D;&#x53CA;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x96C6;&#x6210;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x4E8E;4&#x4FE1;&#x9E3D;&#x53CA;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x96C6;&#x6210;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5173;&#x4E8E;4.*&#x4FE1;&#x9E3D;&#x53CA;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x96C6;&#x6210;&#x8BF4;&#x660E;</h1>
+<hr>
+
+<h3 id="&#x6982;&#x8FF0;"><a name="&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6982;&#x8FF0;</h3>
+<p> &#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x7248;&#x672C;&#x53EF;&#x6839;&#x636E;&#x8BBE;&#x5907;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x9002;&#x914D;&#x76F8;&#x5E94;&#x7684;&#x5382;&#x5546;&#x63A8;&#x9001;&#x670D;&#x52A1;&#xFF0C;&#x65E0;&#x9700;&#x53E6;&#x5916;&#x624B;&#x52A8;&#x96C6;&#x6210;&#x5382;&#x5546;&#x901A;&#x9053;&#xFF0C;&#x5927;&#x5927;&#x51CF;&#x5C11;&#x4E86;&#x5F00;&#x53D1;&#x8005;&#x63A5;&#x5165;&#x65F6;&#x95F4;&#x548C;<code>app</code>&#x7684;&#x4F53;&#x91CF;&#x3002;</p>
+<h2 id="&#xFF08;as&#x96C6;&#x6210;&#xFF09;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;&#xFF1A;"><a name="&#xFF08;as&#x96C6;&#x6210;&#xFF09;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#xFF08;as&#x96C6;&#x6210;&#xFF09;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#xFF08;AS&#x96C6;&#x6210;&#xFF09;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;&#xFF1A;</h2>
+<ol>
+<li>&#x5728;&#x4F60;app&#x6A21;&#x5757;&#x7684;<code>build.gradle</code> &#x6587;&#x4EF6;&#x91CC;&#x6DFB;&#x52A0;</li>
+</ol>
+<pre><code class="lang-java">
+    ndk {
+                <span class="hljs-comment">//&#x6839;&#x636E;&#x9700;&#x8981; &#x81EA;&#x884C;&#x9009;&#x62E9;&#x6DFB;&#x52A0;&#x7684;&#x5BF9;&#x5E94;cpu&#x7C7B;&#x578B;&#x7684;.so&#x5E93;&#x3002;</span>
+                abiFilters <span class="hljs-string">&apos;armeabi&apos;</span>, <span class="hljs-string">&apos;armeabi-v7a&apos;</span>, <span class="hljs-string">&apos;arm64-v8a&apos;</span>
+                <span class="hljs-comment">// &#x8FD8;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0; &apos;x86&apos;, &apos;x86_64&apos;, &apos;mips&apos;, &apos;mips64&apos;</span>
+            }
+    manifestPlaceholders = [
+                XG_ACCESS_ID:<span class="hljs-string">&quot;&#x6CE8;&#x518C;&#x5E94;&#x7528;&#x7684;accessid&quot;</span>,
+                XG_ACCESS_KEY : <span class="hljs-string">&quot;&#x6CE8;&#x518C;&#x5E94;&#x7528;&#x7684;accesskey&quot;</span>,
+              <span class="hljs-comment">//&#x5982;&#x679C;&#x9700;&#x8981;&#x534E;&#x4E3A;&#x901A;&#x9053;&#xFF0C;&#x5219;&#x52A0;&#x4E0A;&#x534E;&#x4E3A;&#x7684;APPID </span>
+                HW_APPID: <span class="hljs-string">&quot;&#x534E;&#x4E3A;&#x7684;APPID&quot;</span>
+                 ]
+    <span class="hljs-comment">//&#x589E;&#x52A0;&#x4EE5;&#x4E0B;&#x4F9D;&#x8D56;</span>
+    implementation  <span class="hljs-string">&apos;com.tencent.xinge:xinge:4.3.1-xgotherpush-beta&apos;</span>
+    implementation <span class="hljs-string">&apos;com.tencent.wup:wup:1.0.0.E-release&apos;</span>
+    implementation <span class="hljs-string">&apos;com.tencent.mid:mid:4.0.7-Release&apos;</span>
+    <span class="hljs-comment">//&#x9700;&#x8981;&#x96C6;&#x6210;fcm&#x589E;&#x52A0;&#x4EE5;&#x4E0B;&#x4F9D;&#x8D56;&#x5E76;&#x5C06;google-services.json&#x653E;&#x8FDB;&#x4F60;&#x5E94;&#x7528;model&#x7684;&#x6839;&#x8DEF;&#x5F84;&#x4E0B;:</span>
+    implementation <span class="hljs-string">&apos;com.tencent.xinge:fcm:4.3.0-beta&apos;</span>
+    implementation <span class="hljs-string">&apos;com.google.firebase:firebase-messaging:17.3.1&apos;</span>
+    apply plugin: <span class="hljs-string">&apos;com.google.gms.google-services&apos;</span>
+</code></pre>
+<p> 2.&#x4EE3;&#x7801;&#x4E0A;&#x9700;&#x8981;&#x5728;&#x4F60;&#x7684;<code>Application</code>&#x7684;<code>attachBaseContext</code>&#x51FD;&#x6570;&#x91CC;&#x9762;&#x589E;&#x52A0;</p>
+<pre><code class="lang-java">     StubAppUtils.attachBaseContext(context);
+</code></pre>
+<p>&#x521D;&#x59CB;&#x5316;&#x9875;&#x9762;&#x6DFB;&#x52A0; </p>
+<pre><code class="lang-java">    XGPushConfig.enableOtherPush(getApplicationContext(), <span class="hljs-keyword">true</span>);
+    XGPushConfig.setMiPushAppId(getApplicationContext(), <span class="hljs-string">&quot;APPID&quot;</span>);
+    XGPushConfig.setMiPushAppKey(getApplicationContext(), <span class="hljs-string">&quot;APPKEY&quot;</span>);
+    XGPushConfig.setMzPushAppId(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;APPID&quot;</span>);
+    XGPushConfig.setMzPushAppKey(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;APPKEY&quot;</span>);
+    XGPushManager.registerPush(<span class="hljs-keyword">this</span>, <span class="hljs-keyword">new</span> XGIOperateCallback() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(Object data, <span class="hljs-keyword">int</span> flag)</span> </span>{
+    <span class="hljs-comment">//token&#x5728;&#x8BBE;&#x5907;&#x5378;&#x8F7D;&#x91CD;&#x88C5;&#x7684;&#x65F6;&#x5019;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x53D8;</span>
+    Log.d(<span class="hljs-string">&quot;TPush&quot;</span>, <span class="hljs-string">&quot;&#x6CE8;&#x518C;&#x6210;&#x529F;&#xFF0C;&#x8BBE;&#x5907;token&#x4E3A;&#xFF1A;&quot;</span> + data);
+    }
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFail</span><span class="hljs-params">(Object data, <span class="hljs-keyword">int</span> errCode, String msg)</span> </span>{
+    Log.d(<span class="hljs-string">&quot;TPush&quot;</span>, <span class="hljs-string">&quot;&#x6CE8;&#x518C;&#x5931;&#x8D25;&#xFF0C;&#x9519;&#x8BEF;&#x7801;&#xFF1A;&quot;</span> + errCode + <span class="hljs-string">&quot;,&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF1A;&quot;</span> + msg);
+    }
+    })
+</code></pre>
+<h3 id="&#xFF08;as&#x96C6;&#x6210;&#xFF09;&#x4E0D;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;&#xFF1A;"><a name="&#xFF08;as&#x96C6;&#x6210;&#xFF09;&#x4E0D;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#xFF08;as&#x96C6;&#x6210;&#xFF09;&#x4E0D;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#xFF08;AS&#x96C6;&#x6210;&#xFF09;&#x4E0D;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;&#xFF1A;</h3>
+<p>1.&#x5728;&#x4F60;app&#x6A21;&#x5757;&#x7684;<code>build.gradle</code>&#x6587;&#x4EF6;&#x91CC;&#x6DFB;&#x52A0;</p>
+<pre><code class="lang-java">    ndk {
+                <span class="hljs-comment">//&#x6839;&#x636E;&#x9700;&#x8981; &#x81EA;&#x884C;&#x9009;&#x62E9;&#x6DFB;&#x52A0;&#x7684;&#x5BF9;&#x5E94;cpu&#x7C7B;&#x578B;&#x7684;.so&#x5E93;&#x3002;</span>
+                abiFilters <span class="hljs-string">&apos;armeabi&apos;</span>, <span class="hljs-string">&apos;armeabi-v7a&apos;</span>, <span class="hljs-string">&apos;arm64-v8a&apos;</span>
+                <span class="hljs-comment">// &#x8FD8;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0; &apos;x86&apos;, &apos;x86_64&apos;, &apos;mips&apos;, &apos;mips64&apos;</span>
+            }
+     manifestPlaceholders = [
+                XG_ACCESS_ID:<span class="hljs-string">&quot;&#x6CE8;&#x518C;&#x5E94;&#x7528;&#x7684;accessid&quot;</span>,
+                XG_ACCESS_KEY : <span class="hljs-string">&quot;&#x6CE8;&#x518C;&#x5E94;&#x7528;&#x7684;accesskey&quot;</span>,
+              <span class="hljs-comment">//&#x5982;&#x679C;&#x9700;&#x8981;&#x534E;&#x4E3A;&#x901A;&#x9053;&#xFF0C;&#x5219;&#x52A0;&#x4E0A;&#x534E;&#x4E3A;&#x7684;APPID </span>
+                HW_APPID: <span class="hljs-string">&quot;&#x534E;&#x4E3A;&#x7684;APPID&quot;</span>
+                 ]
+    <span class="hljs-comment">//&#x589E;&#x52A0;&#x4EE5;&#x4E0B;&#x4F9D;&#x8D56;</span>
+
+    implementation <span class="hljs-string">&apos;com.tencent.xinge:xinge:4.3.1-beta&apos;</span>
+    implementation <span class="hljs-string">&apos;com.tencent.wup:wup:1.0.0.E-release&apos;</span>
+    implementation <span class="hljs-string">&apos;com.tencent.mid:mid:4.0.7-Release&apos;</span>
+    implementation <span class="hljs-string">&apos;com.tencent.xinge:mipush:4.3.1-xiaomi-beta&apos;</span>
+    implementation <span class="hljs-string">&apos;com.tencent.xinge:xgmz:4.3.1-meizu-beta&apos;</span>
+    implementation <span class="hljs-string">&apos;com.tencent.xinge:xghw:4.3.1-huawei-beta&apos;</span>
+    <span class="hljs-comment">//fcm&#x901A;&#x9053;&#x9700;&#x8981;&#x589E;&#x52A0;&#x4EE5;&#x4E0B;&#x4F9D;&#x8D56;&#x5E76;&#x5C06;google-services.json&#x653E;&#x8FDB;&#x4F60;&#x5E94;&#x7528;model&#x7684;&#x6839;&#x8DEF;&#x5F84;&#x4E0B;&#x3002;</span>
+    implementation <span class="hljs-string">&apos;com.tencent.xinge:fcm:4.3.1-beta&apos;</span>
+    implementation <span class="hljs-string">&apos;com.google.firebase:firebase-messaging:17.3.1&apos;</span>
+    apply plugin: <span class="hljs-string">&apos;com.google.gms.google-services&apos;</span>
+</code></pre>
+<p>2.&#x521D;&#x59CB;&#x5316;&#x9875;&#x9762;&#x6DFB;&#x52A0; </p>
+<pre><code class="lang-java">    XGPushConfig.enableOtherPush(getApplicationContext(), <span class="hljs-keyword">true</span>);
+    XGPushConfig.setMiPushAppId(getApplicationContext(), <span class="hljs-string">&quot;APPID&quot;</span>);
+    XGPushConfig.setMiPushAppKey(getApplicationContext(), <span class="hljs-string">&quot;APPKEY&quot;</span>);
+    XGPushConfig.setMzPushAppId(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;APPID&quot;</span>);
+    XGPushConfig.setMzPushAppKey(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;APPKEY&quot;</span>);
+    XGPushManager.registerPush(<span class="hljs-keyword">this</span>, <span class="hljs-keyword">new</span> XGIOperateCallback() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(Object data, <span class="hljs-keyword">int</span> flag)</span> </span>{
+    <span class="hljs-comment">//token&#x5728;&#x8BBE;&#x5907;&#x5378;&#x8F7D;&#x91CD;&#x88C5;&#x7684;&#x65F6;&#x5019;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x53D8;</span>
+    Log.d(<span class="hljs-string">&quot;TPush&quot;</span>, <span class="hljs-string">&quot;&#x6CE8;&#x518C;&#x6210;&#x529F;&#xFF0C;&#x8BBE;&#x5907;token&#x4E3A;&#xFF1A;&quot;</span> + data);
+    }
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFail</span><span class="hljs-params">(Object data, <span class="hljs-keyword">int</span> errCode, String msg)</span> </span>{
+    Log.d(<span class="hljs-string">&quot;TPush&quot;</span>, <span class="hljs-string">&quot;&#x6CE8;&#x518C;&#x5931;&#x8D25;&#xFF0C;&#x9519;&#x8BEF;&#x7801;&#xFF1A;&quot;</span> + errCode + <span class="hljs-string">&quot;,&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF1A;&quot;</span> + msg);
+    }
+    })
+</code></pre>
+<h3 id="&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><a name="&#x6CE8;&#x610F;&#x4E8B;&#x9879;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x6CE8;&#x610F;&#x4E8B;&#x9879;</h3>
+<ol>
+<li>&#x52A8;&#x6001;&#x4E0B;&#x8F7D;&#x63D2;&#x4EF6;&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;&#x534E;&#x4E3A;&#x3001;&#x5C0F;&#x7C73;&#x3001;&#x9B45;&#x65CF;&#x901A;&#x9053;,&#x6709;&#x53EF;&#x80FD;&#x5728;&#x67D0;&#x4E9B;&#x673A;&#x578B;&#x4E0A;&#x51FA;&#x73B0;&#x672A;&#x77E5;&#x5F02;&#x5E38;&#xFF0C;&#x5BFC;&#x81F4;&#x6CE8;&#x518C;&#x5931;&#x8D25;&#x3002;</li>
+<li>&#x80FD;&#x5426;&#x6210;&#x529F;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x7684;dex&#x914D;&#x7F6E;&#x5305;&#x4F9D;&#x8D56;&#x4E8E;&#x7EC8;&#x7AEF;&#x7F51;&#x7EDC;&#x73AF;&#x5883;&#x548C;&#x8BBE;&#x5907;&#x5382;&#x5546;&#x7CFB;&#x7EDF;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x5982;&#x591A;&#x6B21;&#x6CE8;&#x518C;&#x5931;&#x8D25;&#x8BF7;&#x4F7F;&#x7528;<a href="#&#xFF08;AS&#x96C6;&#x6210;&#xFF09;&#x4E0D;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;">&#xFF08;AS&#x96C6;&#x6210;&#xFF09;&#x4E0D;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x901A;&#x9053;&#x65B9;&#x5F0F;</a>&#x3002;</li>
+<li>&#x4F7F;&#x7528;AS&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x65B9;&#x5F0F;&#x65E0;&#x9700;&#x624B;&#x52A8;&#x96C6;&#x6210;XG4HWPush.jar&#xFF0C;XG4MZPush.jar&#xFF0C;&#x5C0F;&#x7C73;XG4XMPush.jar&#x7B49;&#x5BF9;&#x5E94;&#x901A;&#x9053;&#x7684;jar&#x6216;&#x8005;&#x662F;gradle&#x5BF9;&#x5E94;&#x4F9D;&#x8D56;&#x3002;</li>
+<li>&#x5982;&#x679C;Eclipse&#x96C6;&#x6210;&#x9700;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x65B9;&#x5F0F;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x589E;&#x52A0;XgOtherPush.jar&#x5305;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x8981;&#x589E;&#x52A0;&#x6B64;&#x5305;&#x3002;(&#x6CE8;&#x610F;&#xFF1A;XgOtherPush.jar&#x548C;&#x624B;&#x52A8;&#x5BFC;&#x5165;&#x7684;XG4XMPush.jar&#xFF0C;XG4MZPush&#xFF0C;XG4HWPush&#x7684;jar&#x6216;&#x8005;&#x662F;&#x5C0F;&#x7C73;&#xFF0C;&#x534E;&#x4E3A;&#xFF0C;&#x9B45;&#x65CF;&#x7684;gradle&#x5BF9;&#x5E94;&#x4F9D;&#x8D56;&#x662F;&#x4E92;&#x65A5;&#x7684;&#x3002;)</li>
+<li>Eclipse&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x9700;&#x589E;&#x52A0;XgOtherPush.jar&#xFF0C;manifest&#x5FC5;&#x987B;&#x8981;&#x914D;&#x4E0A;&#x4E91;&#x63A7;&#x914D;&#x7F6E;&#xFF1A;<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">receiver</span>
+         <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.tencent.android.tpush.cloudctr.network.CloudControlDownloadReceiver&quot;</span>
+         <span class="hljs-attr">android:exported</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">intent-filter</span>&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-name">action</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.tencent.android.tpush.cloudcontrol.action.DOWNLOAD_FILE_FINISH&quot;</span> /&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">intent-filter</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">receiver</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">service</span>
+         <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.tencent.android.tpush.cloudctr.network.CloudControlDownloadService&quot;</span>
+         <span class="hljs-attr">android:exported</span>=<span class="hljs-string">&quot;true&quot;</span>
+         <span class="hljs-attr">android:persistent</span>=<span class="hljs-string">&quot;true&quot;</span> /&gt;</span>
+</code></pre>
+&#x5728;&#x4EE3;&#x7801;&#x63A5;&#x5165;&#x4E0A;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x4F60;&#x7684;&#x5E94;&#x7528;<code>Application</code>&#x7684;<code>attachBaseContext</code>&#x51FD;&#x6570;&#x91CC;&#x9762;&#x589E;&#x52A0;<code>StubAppUtils.attachBaseContext(context);</code>&#x521D;&#x59CB;&#x5316;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x6846;&#x67B6;&#x3002;
+<strong>&#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x5382;&#x5546;&#x7B2C;4&#x70B9;&#x5C31;&#x65E0;&#x9700;&#x6DFB;&#x52A0;</strong>&#x3002;</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="android_access/upgrade_guide.html" class="navigation navigation-prev " aria-label="Previous page: Android SDK 4.* 集成指南">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="android_access/android_api.html" class="navigation navigation-next " aria-label="Next page: Android SDK API">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"关于4.*信鸽及动态加载厂商通道集成说明","level":"1.2.4","depth":2,"next":{"title":"Android SDK API","level":"1.2.5","depth":2,"path":"android_access/android_api.md","ref":"android_access/android_api.md","articles":[]},"previous":{"title":"Android SDK 4.* 集成指南","level":"1.2.3","depth":2,"path":"android_access/upgrade_guide.md","ref":"android_access/upgrade_guide.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","splitter@^0.0.8","-sharing","simple-page-toc@^0.1.1","anchor-navigation-ex@0.1.8","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"search-plus":{},"splitter":{},"expandable-chapters-small":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"腾讯移动推送 文档","language":"zh-hans","links":{"sidebar":{"腾讯移动推送":"http://xg.qq.com/"}},"gitbook":"*","description":"腾讯移动推送相关文档记录"},"file":{"path":"v4_cloud_download.md","mtime":"2019-01-28T07:22:34.327Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-28T07:24:49.481Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

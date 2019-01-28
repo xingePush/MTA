@@ -86,12 +86,12 @@ public function QueryTokenTags($deviceToken)
 **\[推送暂停\]**
 
 * 全量推送限制(V2、V3)：
-  1. 全量推送每小时最多只能创建30次推送，超过30次会被暂停。
-  2. 相同内容的全量推送每小时只能推送一次，超过一次推送会被暂停。
+  1. 全量推送每小时最多只能创建30次推送，超过30次会推送失败。
+  2. 相同内容的全量推送每小时只能推送一次，超过一次推送会推送失败。
 
 * 标签推送限制(V3)：
-  1. 同一标签每小时最多只能创建30次推送，超过30次会被暂停。
-  2. 同一标签相同内容的推送每小时只能推送一次，超过一次推送会被暂停。
+  1. 同一应用每小时最多只能创建30次标签推送，超过30次会推送失败。
+  2. 同一标签相同内容的推送每小时只能推送一次，超过一次推送会推送失败。
 
 
 **\[效果统计\]**
@@ -105,7 +105,7 @@ public function QueryTokenTags($deviceToken)
 
 **\[历史明细\]**
 
-* 历史明细只展示：全量推送、tag推送、和官网的号码包推送。（其他推送接口不展示推送详情）
+* 历史明细只展示：全量推送、tag推送、和官网的号码包推送。（批量账号和批量设备暂不展示推送详情）
 
 **\[数据概览\]**
 
@@ -147,7 +147,7 @@ action.setIntent("xgscheme://com.xg.push/notify_detail?param1=aa&param2=bb");
 ```
 
 * 终端获取参数：
-在你跳转指定的页面onCreat方法里面：
+在你跳转指定的页面onCreate方法里面：
 ```
 Uri uri = getIntent().getData();
         if (uri != null) {                
@@ -207,6 +207,25 @@ String s = clickedResult.getContent();
 **注：如果需要通过点击回调获取参数或者跳转自定义页面，可以通过使用Intent来实现，[点击查看教程](http://docs.developer.qq.com/xg/android_access/android_faq.html#%E6%B6%88%E6%81%AF%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6%E4%BB%A5%E5%8F%8A%E8%B7%B3%E8%BD%AC%E9%A1%B5%E9%9D%A2%E6%96%B9%E6%B3%95)**
 
 ### 调试过程中可能遇到的otherpushToken = null的问题
+*  4.X的otherpush版本检查是否开启厂商通道初始化代码，在你的Application的attachBaseContext函数里面增加
+
+ ```
+ StubAppUtils.attachBaseContext(context);
+ ```
+*  4.X的otherpush版本，等待云控成功下载对应设备的厂商dex包后，需杀死应用进程，并再次启动应用才能完成注册。下载完成的日志如下：
+  ```xml
+10-25 15:16:31.067 16551-16551/? D/XINGE: [DownloadService] onCreate()
+10-25 15:16:31.073 16551-16757/? D/XINGE: [DownloadService] action:onHandleIntent
+10-25 15:16:31.083 16551-16757/? V/XINGE: [CloudCtrDownload] Create downloadControl
+10-25 15:16:31.089 16551-16757/? I/XINGE: [CloudCtrDownload] action:download - url:https://pingjs.qq.com/xg/Xg-Xm-plug-1.0.2.pack, saveFilePath:/data/user/0/com.qq.xgdemo1122/app_dex/XG/5/, fileName:Xg-Xm-plug-1.0.2.pack
+10-25 15:16:31.097 16551-16757/? V/XINGE: [CloudCtrDownload] Download file: Xg-Xm-plug-1.0.2.pack
+10-25 15:16:31.641 16551-16757/? D/XINGE: [DownloadService] download file Succeed
+10-25 15:16:31.650 16551-16757/? D/XINGE: [CloudCtrDownload] Download succeed.
+10-25 15:16:31.653 16551-16551/? D/XINGE: [CloudControlDownloadReceiver] onReceive
+10-25 15:16:31.673 16551-16738/? I/test: Download file SuccessXg-Xm-plug-1.0.2.pack to /data/user/0/com.qq.xgdemo1122/app_dex/XG/5/
+```
+* 若始终无法下载dex配置包可采用非动态加载方式集成，需使用信鸽4.x不包含厂商通道版本jar，再集成各个厂商通道的jar，集成配置可参考文档。
+
 
 **\[小米通道排查路径\]**
 
@@ -230,7 +249,9 @@ XGPushConfig.setMiPushAppId(this,MIPUSH_APPID);
 XGPushConfig.setMiPushAppKey(this,MIPUSH_APPKEY);
 ```
 
-* APP包名是否和小米开推送平台注册的包名一致
+* APP包名是否和小米开放推送平台、信鸽管理台注册的包名一致
+
+
 * 通过实现自定义的继承PushMessageReceiver的广播来监听小米的注册结果，查看注册返回码
 * 启动logcat，观察tag为PushService的日志，看看有什么错误信息
 
@@ -239,8 +260,8 @@ XGPushConfig.setMiPushAppKey(this,MIPUSH_APPKEY);
 * 检查信鸽SDK版本是否为V3.2.0以上版本以及 华为手机中【设置】->【应用管理】->【华为移动服务】的版本信息是否大于2.5.3
 * 按照开发文档华为通道接入指南部分检查manifest文件配置
 * 在信鸽注册之前是否启动了第三方推送，以及华为APPID是否配置正确
-* APP的包名和华为推送官网上的包名是否一致
-* 在注册代码之前调用：XGPushConfig.setHuaweiDebug\(true\),手动确认给应用存储权限，然后查看SD卡目录下的hauwei.txt文件内输出的华为注册失败的错误原因，然后根据华为开发文档对应的错误码查找原因
+* APP的包名和华为推送官网、信鸽管理台注册包名是否一致
+* 在注册代码之前调用：XGPushConfig.setHuaweiDebug\(true\),手动确认给应用存储权限，然后查看SD卡目录下的huawei.txt文件内输出的华为注册失败的错误原因，然后根据华为开发文档对应的错误码查找原因
 * cmd里执行adb shell setprop log.tag.hwpush VERBOSE和
   adb shell logcat -v time &gt; D:/log.txt 开始抓日志，然后进行测试，测完再关闭cmd窗口。将log发给技术支持
 
@@ -248,180 +269,7 @@ XGPushConfig.setMiPushAppKey(this,MIPUSH_APPKEY);
 
 * 和小米通道的排查方法类似，参考小米通道的排查路径即可
 
-## 常见问题FAQ
 
----
-
-**问: 集成小米通道，没有点击回调，怎么实现点击通知栏信息跳转到指定页面？**
-
-
-  答: 集成厂商通道的必须使用「[intent](http://docs.developer.qq.com/xg/android_access/android_faq.html#消息点击事件以及跳转页面方法)」方式来跳转
-
-
-**问: 应用关闭或结束进程后，还能收到推送消息吗？**
-
-```
-答：信鸽推送主要依赖信鸽的service进行消息的收发，杀死进程之后信鸽service也被杀死，只能等待service
-被拉活或重启app才可以收到推送。若手机中有其他接入信鸽的app被打开，则可以利用其他app的service接收消息，
-但共享service通道也受手机ROM限制，无法保证百分之百的成功率
-```
-**问: 对单个设备，保存多少条离线信息？保存时间？**
-
-```
-答: 离线消息Android最多保存2条，iOS最多保存1条；保存时间最多72小时
-```
-
-
-**问:Android版本4.4.4编译报错，找不到XGPushProvider、MidProvider？**
-
-```
-答: 由于工程加载方法数超过65K,请对工程做分包处理
-```
-
-**问: 标签方面限制？**
-
-```
-答: 单个设备最多设置100个标签，单个app全局最多可以有10000个不同的标签
-```
-
-**问: 当第一次注册成功后，没有反注册，以后使用还需要注册吗？**
-
-```
-答: 不需要，只要没反注册，就不需要再次注册
-```
-
-**问: 设备注册为什么收不到回调信息？**
-
-```
-答: 注册操作中，后台只可能有三种出错行为：
-
-    (1)不响应；
-
-    (2)返回错误格式的数据包；
-
-    (3)返回错误码。这三种行为终端应该都可以检测到并给出回调
-```
-
-**问: Token与Account区别？**
-
-```
-答: Token是APP接收推送消息（device）的标识，账号是一个用户（users）的标识
-```
-
-**问: 账号在设备A上登录过，又在设备B上登录？给这个账号发信息会怎么样？**
-
-```
-答: 设备B上能够收到推送。设备A无法收到推送
-```
-
-**问: 标签与账号的区别？**
-
-```
-答: 标签是用于标识一个Token或用户的一些属性，如广东省、男性、游戏玩家等。帐号是用户的账号，请勿
-用标签作为别名使用
-```
-
-**问：指定打开某个activity页面，但经常不能正常跳转**
-
-```
-答：在部分手机，通知栏跳转到某个页面可能会出现权限问题
-处理方法：在androidManifest.xml中，需要打开的activity加上android:exported="true"
-```
-
-**问: 在应用列表中看到「覆盖设备数」，具体指的是什么？**
-
-```
-答: 是指该应用下处于注册状态的设备数/终端数，同时也是该应用在推送时可以覆盖到的最大设备数。终端若调用了
-反注册unregister的接口，覆盖设备数会减少
-```
-
-**问：为什么libs目录下有很多平台的.so文件，如armabi、x86**
-
-```
-答：信鸽针对android所有的平台开发了.so库
-处理方法：可以将不需要的平台目录删除掉，如游戏一般只有armabi，可以删除其它目录
-```
-
-**问: 为什么在web端推送出现服务器繁忙？**
-
-```
-答: 请先检查Token以及所选推送环境是否正确，然后检查证书是否正确提交，若还出现相同错误可重新制作一份
-不带密码的证书提交再试
-```
-
-**问: 推送过程中，非定时推送（立即推送）能否撤销？**
-
-```
-答: 不能，只有返回push_id的任务才可以做撤销操作。
-```
-
-**问: 推送后查看推送列表，已经推送完成了，状态却显示推送中，怎么办？**
-
-```
-答: 网页有延迟，刷新再试试
-```
-
-**问: 用户重连上线后收到多条push的顺序是怎样？**
-
-```
-答: 按照消息ID递增。客户端也是按照此规则收取消息，因此，收消息的顺序就是发消息的顺序
-```
-**问: 集成小米通道的设备，为什么只能显示一条推送消息？**
-
-```
-答: 小米官网文档指明：默认情况下，通知栏只显示一条推送消息。如果通知栏要显示多条推送消息，需要针对不同的消息设置不同的notify_id（相同notify_id的通知栏消息会覆盖之前的）。
-```
-
-**问: 我现在有安卓的用户和iOS的用户，那我php后台要写两个不同的接口分别推给安卓用户和ios用户吗？**
-
-```
-答: 需要调用两次推送接口 也可以把两个封装为一个
-```
-
-**问: 如果定时push选择的是过去的时间，是不是不会push出去？**
-
-```
-答: 不是，选择过去的时间系统则会立刻发送
-```
-
-**问: 为什么会出现推送通知时，只有声音却没有文字信息的情况？**
-
-```
-答: 该问题与系统有很大关系，需要拿设备的logcat来进行特定分析
-```
-
-**问：信鸽推送是否支持海外**
-
-```
-答：只要能ping通信鸽服务器域名 openapi.xg.qq.com 就能够收到推送消息，信鸽海外服务器部署在香港，由于
-在海外地区网络延时较高，信鸽在海外的推送效果会略低于在国内的推送效果
-```
-
-**问: 信鸽与腾讯开放平台的APPID数据是否相通？**
-
-```
-答：当你在开放平台注册应用并使用信鸽后，应用的信息会自动从开放平台同步至信鸽平台，单独使用信鸽时不用重
-新接入应用。但是在信鸽接入的应用不会同步至开放平台
-```
-
-**问：没有sd卡就不能用信鸽了么?**
-
-```
-答：不会，只是日志写的地方不同
-```
-
-**问：注册方法能不能放到线程里创建，能不能在APPLICATON onCreate里就创建?**
-
-```
-答：注册方法可以在任何地方调用，但注意要传递applicationContext
-```
-
-**问：如何删除注册成功的Toast提示?**
-
-```
-答：demo里面的CustomPushReceiver自带Toast提示处理方法：删除CustomPushReceiver里面的Toast
-相关内容
-```
 
 
 

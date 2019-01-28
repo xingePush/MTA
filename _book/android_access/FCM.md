@@ -1,9 +1,11 @@
 #FCM通道集成指南
 
-fcm通道是信鸽和谷歌推出的各种推送通道，在外国可用谷歌service框架的手机上能够实现不打开应用收到推送消息。在没有fcm的手机rom下依旧走信鸽的推送通道。此功能必须先集成信鸽推送 3.2beta版本。
+fcm通道是信鸽和谷歌推出的各种推送通道，在外国可用谷歌service框架的手机上能够实现不打开应用收到推送消息。在没有fcm的手机rom下依旧走信鸽的推送通道。
 
 ##获取FCM推送秘钥
-[FireBase官网](https://firebase.google.com/?hl=zh-cn)注册应用信息。并将获取到的FCM应用推送服务器密钥和您信鸽的access id 通过邮件dtsupport@tencent.com 发送给我们，或者添加QQor微信2631775454。目前需要信鸽的后台手动将信鸽的access id和FCM的服务器密钥进行绑定。并下载google-services.json 文件。如图所示：
+1. [FireBase官网](https://firebase.google.com/?hl=zh-cn)注册应用信息。并将获取到的FCM应用推送服务器密钥和 SenderID，配置到信鸽的管理台。
+2. 下载google-services.json 文件。
+如图所示：
 
 获取json文件：
 ![](/assets/获取fcmjson.jpeg)
@@ -28,17 +30,13 @@ classpath 'com.google.gms:google-services:3.1.0'
 在应用级的build.gradle文件中添加依赖
 ```xml
 
-compile 'com.tencent.xinge:fcm:4.0.3'
+compile 'com.tencent.xinge:fcm:4.3.0-beta'
 
-compile 'com.google.firebase:firebase-messaging:12.0.1'
 
-注：云消息传递
+compile 'com.google.firebase:firebase-messaging:17.3.1'
 
-compile 'com.google.android.gms:play-services-base:12.0.1'
 
-注：Google配置google-play-services网（信鸽只用到了检测设备是否支持google service功能，要求版本大于12.0.1）：https://developers.google.com/android/guides/setup#add_google_play_services_to_your_project
-
- //并在应用级的gradle文件的最后一行代码中新增
+ //在应用级的gradle文件的最后一行代码中新增并将google-services.json放进你应用model的根路径下
 
 apply plugin: 'com.google.gms.google-services'
 
@@ -103,11 +101,13 @@ apply plugin: 'com.google.gms.google-services'
 ```
 
 ##启用FCM推送
-在项目设置里，云消息传递获取服务器秘钥并提供给[信鸽技术支持](http://xg.qq.com/app/ctr_feedback/index)
+
+
 在调用信鸽注册代码（XGPushManager.registerPush）前面添加以下代码设置
 
 ```java
 XGPushConfig.enableFcmPush(this,true);
+XGPushConfig.enableOtherPush(this, true);
 ```
 注册FCM成功的日志如下：
 

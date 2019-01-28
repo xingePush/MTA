@@ -247,9 +247,10 @@ NSInteger number = [[XGPush defaultManager] xgApplicationBadgeNumber];
    didReceiveNotificationResponse:(UNNotificationResponse *)response
    withCompletionHandler:(void(^)())completionHandler 
    {
-    [[XGPush defaultManager] 
-     reportXGNotificationInfo:response.notification.request.content.userInfo];
-       completionHandler();
+  
+    [[XGPush defaultManager] reportXGNotificationResponse:response];
+            completionHandler();
+
    }
 ```
 

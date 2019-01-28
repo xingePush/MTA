@@ -1,0 +1,766 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Android P 兼容方法 · 腾讯移动推送 文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ios_access.html" />
+    
+    
+    <link rel="prev" href="android_returncode.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://xg.qq.com/" target="_blank" class="custom-link">腾讯移动推送</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    信鸽推送基础介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../android_access.html">
+            
+                <a href="../android_access.html">
+            
+                    
+                    Android接入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="xg_push_introduction.html">
+            
+                <a href="xg_push_introduction.html">
+            
+                    
+                    Android 推送服务介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="jcenter.html">
+            
+                <a href="jcenter.html">
+            
+                    
+                    Android SDK 3.* 集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="upgrade_guide.html">
+            
+                <a href="upgrade_guide.html">
+            
+                    
+                    Android SDK 4.* 集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../v4_cloud_download.html">
+            
+                <a href="../v4_cloud_download.html">
+            
+                    
+                    关于4.*信鸽及动态加载厂商通道集成说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="android_api.html">
+            
+                <a href="android_api.html">
+            
+                    
+                    Android SDK API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="huawei_push.html">
+            
+                <a href="huawei_push.html">
+            
+                    
+                    华为推送通道集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="mi_push.html">
+            
+                <a href="mi_push.html">
+            
+                    
+                    小米推送通道集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="meizu_push.html">
+            
+                <a href="meizu_push.html">
+            
+                    
+                    魅族推送通道集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="FCM.html">
+            
+                <a href="FCM.html">
+            
+                    
+                    FCM通道集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="android_faq.html">
+            
+                <a href="android_faq.html">
+            
+                    
+                    Android SDK 常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="xg_demo.html">
+            
+                <a href="xg_demo.html">
+            
+                    
+                    Android SDK Demo使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="android_returncode.html">
+            
+                <a href="android_returncode.html">
+            
+                    
+                    Android SDK 错误码对照表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.13" data-path="android_p_compatibility.html">
+            
+                <a href="android_p_compatibility.html">
+            
+                    
+                    Android P 兼容方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ios_access.html">
+            
+                <a href="../ios_access.html">
+            
+                    
+                    iOS接入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ios_access/ios_push_introduction.html">
+            
+                <a href="../ios_access/ios_push_introduction.html">
+            
+                    
+                    iOS 推送服务介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ios_access/ios_access_guide.html">
+            
+                <a href="../ios_access/ios_access_guide.html">
+            
+                    
+                    iOS SDK 集成指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ios_access/ios_api.html">
+            
+                <a href="../ios_access/ios_api.html">
+            
+                    
+                    iOS SDK API 接口文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ios_access/ios_push_certificate.html">
+            
+                <a href="../ios_access/ios_push_certificate.html">
+            
+                    
+                    iOS 推送证书说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../ios_access/ios_xg_idfa.html">
+            
+                <a href="../ios_access/ios_xg_idfa.html">
+            
+                    
+                    iOS关于 IDFA 插件说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../ios_access/ios_extension_api.html">
+            
+                <a href="../ios_access/ios_extension_api.html">
+            
+                    
+                    iOS 关于通知服务扩展的使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../ios_access/ios_returncode.html">
+            
+                <a href="../ios_access/ios_returncode.html">
+            
+                    
+                    iOS SDK 错误码对照表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../ios_access/ios_faq.html">
+            
+                <a href="../ios_access/ios_faq.html">
+            
+                    
+                    iOS SDK 常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../ios_access/api_2.5.0.html">
+            
+                <a href="../ios_access/api_2.5.0.html">
+            
+                    
+                    iOS SDK v2.5.0 完整接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../server_api.html">
+            
+                <a href="../server_api.html">
+            
+                    
+                    服务端API接入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../server_api/other.html">
+            
+                <a href="../server_api/other.html">
+            
+                    
+                    服务端其他语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../manage.html">
+            
+                <a href="../manage.html">
+            
+                    
+                    信鸽推送管理台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../console/auth.html">
+            
+                <a href="../console/auth.html">
+            
+                    
+                    管理台权限说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../console/pushdetail.html">
+            
+                <a href="../console/pushdetail.html">
+            
+                    
+                    管理台数据展示说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../server_api/v3.html">
+            
+                <a href="../server_api/v3.html">
+            
+                    
+                    REST API V3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../server_api/v3/rest_api_summary.html">
+            
+                <a href="../server_api/v3/rest_api_summary.html">
+            
+                    
+                    REST API 概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../server_api/v3/tag_api_v3.html">
+            
+                <a href="../server_api/v3/tag_api_v3.html">
+            
+                    
+                    Tag API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../server_api/v3/push_api_v3.html">
+            
+                <a href="../server_api/v3/push_api_v3.html">
+            
+                    
+                    Push API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../sdk_update.html">
+            
+                <a href="../sdk_update.html">
+            
+                    
+                    最近更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../noun_explanation.html">
+            
+                <a href="../noun_explanation.html">
+            
+                    
+                    名词解释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../QA.html">
+            
+                <a href="../QA.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Android P 兼容方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#demo&#x914D;&#x7F6E;">1. Demo&#x914D;&#x7F6E;</a></li><ul><li><a href="#tls&#x9ED8;&#x8BA4;&#x542F;&#x7528;">1.1. TLS&#x9ED8;&#x8BA4;&#x542F;&#x7528;</a></li><li><a href="#&#x6DFB;&#x52A0;&#x4F7F;&#x7528;apache-http-client&#x5E93;">1.2. &#x6DFB;&#x52A0;&#x4F7F;&#x7528;Apache HTTP client&#x5E93;</a></li><li><a href="#&#x4FEE;&#x6539;compilesdk&#x548C;targetsdk">1.3. &#x4FEE;&#x6539;compileSdk&#x548C;targetSdk</a></li></ul></ul></div><a href="#demo&#x914D;&#x7F6E;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="demo&#x914D;&#x7F6E;"><a name="demo&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#demo&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1. Demo&#x914D;&#x7F6E;</h1>
+<h2 id="tls&#x9ED8;&#x8BA4;&#x542F;&#x7528;"><a name="tls&#x9ED8;&#x8BA4;&#x542F;&#x7528;" class="anchor-navigation-ex-anchor" href="#tls&#x9ED8;&#x8BA4;&#x542F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. TLS&#x9ED8;&#x8BA4;&#x542F;&#x7528;</h2>
+<p>&#x5728;res&#x76EE;&#x5F55;&#x4E0B;&#x7684;xml&#x76EE;&#x5F55;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;xg_network_security_config.xml&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;utf-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">network-security-config</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">domain-config</span> <span class="hljs-attr">cleartextTrafficPermitted</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">domain</span> <span class="hljs-attr">includeSubdomains</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>182.254.116.117<span class="hljs-tag">&lt;/<span class="hljs-name">domain</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">domain</span> <span class="hljs-attr">includeSubdomains</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>pingma.qq.com<span class="hljs-tag">&lt;/<span class="hljs-name">domain</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">domain-config</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">network-security-config</span>&gt;</span>
+</code></pre>
+<p>&#x5728;AndroidManifest&#x7684;application&#x8282;&#x70B9;&#x6DFB;&#x52A0;&#x4E00;&#x4E0B;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-xml">android:networkSecurityConfig=&quot;@xml/xg_network_security_config&quot;
+</code></pre>
+<h2 id="&#x6DFB;&#x52A0;&#x4F7F;&#x7528;apache-http-client&#x5E93;"><a name="&#x6DFB;&#x52A0;&#x4F7F;&#x7528;apache-http-client&#x5E93;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;&#x4F7F;&#x7528;apache-http-client&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x6DFB;&#x52A0;&#x4F7F;&#x7528;Apache HTTP client&#x5E93;</h2>
+<p>&#x5728;AndroidManifest&#x7684;application&#x8282;&#x70B9;&#x5185;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x5373;&#x53EF;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">uses-library</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;org.apache.http.legacy&quot;</span> <span class="hljs-attr">android:required</span>=<span class="hljs-string">&quot;false&quot;</span>/&gt;</span>
+</code></pre>
+<h2 id="&#x4FEE;&#x6539;compilesdk&#x548C;targetsdk"><a name="&#x4FEE;&#x6539;compilesdk&#x548C;targetsdk" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x6539;compilesdk&#x548C;targetsdk"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x4FEE;&#x6539;compileSdk&#x548C;targetSdk</h2>
+<p>&#x7F16;&#x8BD1;APK&#x65F6;&#x4F7F;&#x7528;compileSdkVersion&#x548C;targetSdkVersion&#x90FD;&#x4F7F;&#x7528;28</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="android_returncode.html" class="navigation navigation-prev " aria-label="Previous page: Android SDK 错误码对照表">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ios_access.html" class="navigation navigation-next " aria-label="Next page: iOS接入">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Android P 兼容方法","level":"1.2.13","depth":2,"next":{"title":"iOS接入","level":"1.3","depth":1,"path":"ios_access.md","ref":"ios_access.md","articles":[{"title":"iOS 推送服务介绍","level":"1.3.1","depth":2,"path":"ios_access/ios_push_introduction.md","ref":"ios_access/ios_push_introduction.md","articles":[]},{"title":"iOS SDK 集成指南","level":"1.3.2","depth":2,"path":"ios_access/ios_access_guide.md","ref":"ios_access/ios_access_guide.md","articles":[]},{"title":"iOS SDK API 接口文档","level":"1.3.3","depth":2,"path":"ios_access/ios_api.md","ref":"ios_access/ios_api.md","articles":[]},{"title":"iOS 推送证书说明","level":"1.3.4","depth":2,"path":"ios_access/ios_push_certificate.md","ref":"ios_access/ios_push_certificate.md","articles":[]},{"title":"iOS关于 IDFA 插件说明","level":"1.3.5","depth":2,"path":"ios_access/ios_xg_idfa.md","ref":"ios_access/ios_xg_idfa.md","articles":[]},{"title":"iOS 关于通知服务扩展的使用说明","level":"1.3.6","depth":2,"path":"ios_access/ios_extension_api.md","ref":"ios_access/ios_extension_api.md","articles":[]},{"title":"iOS SDK 错误码对照表","level":"1.3.7","depth":2,"path":"ios_access/ios_returncode.md","ref":"ios_access/ios_returncode.md","articles":[]},{"title":"iOS SDK 常见问题","level":"1.3.8","depth":2,"path":"ios_access/ios_faq.md","ref":"ios_access/ios_faq.md","articles":[]},{"title":"iOS SDK v2.5.0 完整接入","level":"1.3.9","depth":2,"path":"ios_access/api_2.5.0.md","ref":"ios_access/api_2.5.0.md","articles":[]}]},"previous":{"title":"Android SDK 错误码对照表","level":"1.2.12","depth":2,"path":"android_access/android_returncode.md","ref":"android_access/android_returncode.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","splitter@^0.0.8","-sharing","simple-page-toc@^0.1.1","anchor-navigation-ex@0.1.8","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"search-plus":{},"splitter":{},"expandable-chapters-small":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"腾讯移动推送 文档","language":"zh-hans","links":{"sidebar":{"腾讯移动推送":"http://xg.qq.com/"}},"gitbook":"*","description":"腾讯移动推送相关文档记录"},"file":{"path":"android_access/android_p_compatibility.md","mtime":"2019-01-28T07:22:34.249Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-28T07:24:49.481Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
