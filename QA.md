@@ -34,9 +34,10 @@
 ---
 ## 常见问题
 
-**问：iOS开发环境可以收到推送，打包后收不到了**
+**问：iOS开发环境可以收到推送，生产环境打包后收不到了**
 ```
-答：检查打包后是否缺少这个文件 archived-expanded-entitlements.xcent
+答：
+1.检查打包后是否缺少这个文件 archived-expanded-entitlements.xcent
 此时可能还会报错：
 
 No valid 'aps-environment' entitlement string found for application 'com.xxx.xxx': (null).
@@ -49,6 +50,8 @@ No valid 'aps-environment' entitlement string found for application 'com.xxx.xxx
 	<string>production</string>
 </dict>
 </plist>
+2.若终端日志出现"Error Domain=NSCocoaErrorDomain Code=3000 "未找到应用程序的“aps-environment”的授权字符串" UserInfo=0x16545fc0 {NSLocalizedDescription=未找到应用程序的“aps-environment”的授权字符串}"错误
+，请检查 Xcode 工程中配置的 bundle id 是不是和设置的 Provision Profile 文件匹配，且对应 App 的 Provision Profile 文件是不是已经配置了消息推送能力
 ```
 
 
