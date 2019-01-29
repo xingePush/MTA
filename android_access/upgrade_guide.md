@@ -599,6 +599,7 @@ XGPushManager.setTag(this,"XINGE");
 -keep class com.hianalytics.android.**{*;}
 -keep class com.huawei.updatesdk.**{*;}
 -keep class com.huawei.hms.**{*;}
+-keep class com.huawei.android.hms.agent.**{*;}
 
 小米通道
 -keep class com.xiaomi.**{*;}
