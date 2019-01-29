@@ -251,6 +251,8 @@ XGPushConfig.setHuaweiDebug(true);
 -keep class com.hianalytics.android.**{*;}
 -keep class com.huawei.updatesdk.**{*;}
 -keep class com.huawei.hms.**{*;}
+-keep class com.huawei.android.hms.agent.**{*;}
+
 ```
 
 ## 厂商通道测试方法
