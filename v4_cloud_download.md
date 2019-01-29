@@ -25,7 +25,7 @@
     implementation 'com.tencent.wup:wup:1.0.0.E-release'
     implementation 'com.tencent.mid:mid:4.0.7-Release'
     //需要集成fcm增加以下依赖并将google-services.json放进你应用model的根路径下:
-    implementation 'com.tencent.xinge:fcm:4.3.0-beta'
+    implementation 'com.tencent.xinge:fcm:4.3.1-beta'
     implementation 'com.google.firebase:firebase-messaging:17.3.1'
     apply plugin: 'com.google.gms.google-services'
 
