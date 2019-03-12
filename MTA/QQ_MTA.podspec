@@ -1,12 +1,12 @@
 Pod::Spec.new do |spec|
   spec.name						= "QQ_MTA"
-  spec.version					= "2.5.1"
+  spec.version					= "2.5.3"
   spec.summary					= "腾讯移动分析（MTA）"
   spec.homepage					= "http://mta.qq.com"
   spec.authors					= "tencent TEG"
   spec.license					= "MIT"
   spec.platform					= :ios, "8.0"
-  spec.source					= { :git => "https://github.com/xingePush/MTA.git", :tag => spec.version }
+  spec.source					= {:git => "https://github.com/xingePush/MTA.git", :tag => "v#{spec.version}"}
   spec.default_subspec			= 'BasicAnalysis'
 
   spec.subspec 'BasicAnalysis' do |ba|

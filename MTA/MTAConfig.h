@@ -191,6 +191,11 @@ typedef enum {
 @property (nonatomic, copy) NSString *mid;
 
 /**
+ guid，预留字段，无特定含义
+ */
+@property (nonatomic, assign) NSUInteger guid;
+
+/**
  获取在MTA前端控制台配置的参数
  调用这个函数前需要在MTA前端控制台中‘应用配置管理项’下的‘自定义参数’中配置才能生效
  首次配置或者更改参数配置后，需要3-5分钟才能生效
