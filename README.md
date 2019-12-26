@@ -7,7 +7,7 @@ Podfile 中添加
 ```
 pod 'QQ_MTA'
 ```
-__注意: 为了提高统计的精确性, IDFA 模块已经与 MTA 模块合并, 为避免 IDFA 模块影响 APP上架, 请参考 [idfa 配置文档](http://docs.developer.qq.com/mta/fast_access/ios.html#idfa%E9%87%87%E9%9B%86%E6%8C%87%E5%8D%97)进行相关配置__
+__注意: 为了提高统计的精确性, IDFA 模块已经与 MTA 模块合并, 为避免 IDFA 模块影响 APP上架, 请参考 [idfa 配置文档](https://mta.qq.com/docs/iOS_idfa.html)进行相关配置__
 
 ### 可视化埋点功能
 Podfile 中添加
