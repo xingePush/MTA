@@ -45,11 +45,7 @@ Podfile 中添加
 pod 'QQ_MTA/DataInsight'
 ```
 
-### 异常行为监测
-Podfile 中添加
-```
-pod 'QQ_MTA/Fbi'
-```
+
 
 
 ## 更新日志
