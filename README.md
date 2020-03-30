@@ -50,7 +50,7 @@ pod 'QQ_MTA/DataInsight'
 ## 更新日志
 VERSION 2.6.0
 -------------------------------------------
-1.删除UIWebView,因为苹果新政策只支持WKWebview
+1.删除UIWebView,因为苹果新政策只支持WKWebview<br/>
 2.删除FBI和ADTracker插件
 
 VERSION 2.5.9
